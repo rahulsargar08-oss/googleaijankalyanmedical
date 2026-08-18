@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jankalyan Medical Shop - Sangola's Premier 24x7 Certified Pharmacy & Healthcare Store near Wadhegaon Naka. Genuine allopathic, ayurvedic, pediatric, and veterinary medicines.">
+    <meta name="keywords" content="Jankalyan Medical Sangola, Pharmacy in Sangola, 24x7 Medical Store Sangola, Wadhegaon Naka Medical, Allopathic, Ayurvedic, Veterinary Medicine Sangola">
+    <meta name="author" content="Rahul Sargar">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.jankalyanmedical.store/">
+    <meta property="og:title" content="Jankalyan Medical - Sangola's Premier 24x7 Pharmacy">
+    <meta property="og:description" content="Certified 24x7 Pharmacy & Healthcare Hub in Sangola, Maharashtra. Genuine medicines, qualified pharmacists, and AI assistant.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.jankalyanmedical.store/">
+    <title>Jankalyan Medical | 24x7 Certified Pharmacy in Sangola</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6.6.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Announcement & Contact Bar -->
+    <div class="top-bar" id="top-bar">
+        <div class="top-bar-container">
+            <div class="top-bar-left">
+                <span class="status-badge"><span class="pulse-dot"></span> 24×7 SANGOLA HEALTHCARE HUB</span>
+                <span class="top-bar-divider"></span>
+                <span class="top-bar-location"><i class="fa-solid fa-location-dot"></i> Near Wadhegaon Naka, Sangola - 413307</span>
+            </div>
+            <div class="top-bar-right">
+                <span class="live-clock-badge" id="live-clock-badge"><i class="fa-regular fa-clock"></i> <span id="sangola-live-time">Sangola: Open Now</span></span>
+                <span class="top-bar-divider"></span>
+                <a href="tel:+918669118742" class="top-link"><i class="fa-solid fa-phone"></i> +91 86691 18742</a>
+                <span class="top-bar-divider"></span>
+                <a href="https://wa.me/918669118742?text=Hello%20Jankalyan%20Medical!%20I%20need%20assistance%20with%20medicines." target="_blank" rel="noopener noreferrer" class="top-link top-wa">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp Hotline
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header id="main-header" class="main-header">
+        <div class="nav-container">
+            <!-- Brand Logo -->
+            <a href="#home" class="logo" aria-label="Jankalyan Medical Home">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-notes-medical"></i>
+                </div>
+                <div class="logo-text">
+                    <div class="brand-title">JANKALYAN <span class="brand-accent">MEDICAL</span></div>
+                    <div class="brand-tagline">24×7 Certified Pharmacy &bull; Sangola</div>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#services" class="nav-link">Medicines</a></li>
+                    <li><a href="#availability" class="nav-link">Order / Stock</a></li>
+                    <li><a href="#bmi" class="nav-link">BMI Tool</a></li>
+                    <li><a href="#gallery" class="nav-link">Store Photos</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Action Controls -->
+            <div class="header-actions">
+                <button class="btn-ai-header" id="header-ai-btn" onclick="openChatbot()" title="Chat with AI Pharmacist">
+                    <div class="ai-spark-icon"><i class="fa-solid fa-robot"></i></div>
+                    <span class="ai-btn-text">AI Pharmacist</span>
+                </button>
+                <a href="https://wa.me/918669118742?text=Hello%20Jankalyan%20Medical!%20I%20want%20to%20order%20medicine." target="_blank" rel="noopener noreferrer" class="btn-order-header">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Order Now</span>
+                </a>
+                <button class="mobile-toggle" id="mobile-menu" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="bar bar-1"></span>
+                    <span class="bar bar-2"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- REIMAGINED NEO-CLINICAL MOBILE NAVIGATION DRAWER -->
+        <div class="mobile-nav-drawer" id="mobile-drawer">
+            <!-- Drawer Brand Banner -->
+            <div class="drawer-header-card">
+                <div class="drawer-brand-wrap">
+                    <div class="drawer-logo-icon">
+                        <i class="fa-solid fa-notes-medical"></i>
+                    </div>
+                    <div>
+                        <div class="drawer-brand-sub">SANGOLA PHARMACY</div>
+                        <h3 class="drawer-brand-name">JANKALYAN <span>MEDICAL</span></h3>
+                    </div>
+                </div>
+                <button class="drawer-close-btn" id="drawer-close" aria-label="Close navigation menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- 24x7 Live Status Bar -->
+            <div class="drawer-live-bar">
+                <span class="pulse-dot"></span>
+                <span class="drawer-live-text">OPEN RIGHT NOW IN SANGOLA &bull; 24×7 DISPATCH</span>
+            </div>
+
+            <!-- Quick Action Hub -->
+            <div class="drawer-quick-actions">
+                <a href="tel:+918669118742" class="drawer-action-tile call-tile">
+                    <div class="tile-icon-circle"><i class="fa-solid fa-phone"></i></div>
+                    <div class="tile-info">
+                        <strong>Call 24×7 Hotline</strong>
+                        <small>+91 86691 18742</small>
+                    </div>
+                </a>
+                <a href="https://wa.me/918669118742?text=Hello%20Jankalyan%20Medical!%20I%20want%20to%20order%20medicines." target="_blank" rel="noopener noreferrer" class="drawer-action-tile wa-tile">
+                    <div class="tile-icon-circle"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div class="tile-info">
+                        <strong>WhatsApp Order</strong>
+                        <small>Send Prescription Rx</small>
+                    </div>
+                </a>
+                <button onclick="openChatbot(); closeDrawer();" class="drawer-action-tile ai-tile">
+                    <div class="tile-icon-circle"><i class="fa-solid fa-robot"></i></div>
+                    <div class="tile-info">
+                        <strong>AI Pharmacist</strong>
+                        <small>Ask Medicines & Info</small>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Numbered Editorial Navigation Links -->
+            <div class="drawer-nav-sections">
+                <div class="drawer-section-title">NAVIGATION DIRECTORY</div>
+                <ul class="drawer-links">
+                    <li>
+                        <a href="#home" class="drawer-item active">
+                            <span class="drawer-num">01</span>
+                            <div class="drawer-item-content">
+                                <span class="drawer-item-title">Home</span>
+                                <span class="drawer-item-sub">Store Overview & Fast Search</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-right-long drawer-arrow"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services" class="drawer-item">
+                            <span class="drawer-num">02</span>
+                            <div class="drawer-item-content">
+                                <span class="drawer-item-title">Medicines & Catalog</span>
+                                <span class="drawer-item-sub">Allopathic, Ayurvedic & Veterinary</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-right-long drawer-arrow"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#availability" class="drawer-item">
+                            <span class="drawer-num">03</span>
+                            <div class="drawer-item-content">
+                                <span class="drawer-item-title">Check Stock & Order</span>
+                                <span class="drawer-item-sub">Direct WhatsApp Dispense Form</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-right-long drawer-arrow"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#bmi" class="drawer-item">
+                            <span class="drawer-num">04</span>
+                            <div class="drawer-item-content">
+                                <span class="drawer-item-title">BMI Health Calculator</span>
+                                <span class="drawer-item-sub">Check Body Mass Index & Advice</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-right-long drawer-arrow"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#gallery" class="drawer-item">
+                            <span class="drawer-num">05</span>
+                            <div class="drawer-item-content">
+                                <span class="drawer-item-title">Store Photo Gallery</span>
+                                <span class="drawer-item-sub">Real Inside & Outside Views</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-right-long drawer-arrow"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#trust" class="drawer-item">
+                            <span class="drawer-num">06</span>
+                            <div class="drawer-item-content">
+                                <span class="drawer-item-title">Why Trust Us</span>
+                                <span class="drawer-item-sub">Govt Lic. 100% Genuine Pharmacy</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-right-long drawer-arrow"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="drawer-item">
+                            <span class="drawer-num">07</span>
+                            <div class="drawer-item-content">
+                                <span class="drawer-item-title">Location & Contact</span>
+                                <span class="drawer-item-sub">Wadhegaon Naka, Sangola 413307</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-right-long drawer-arrow"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Drawer Store Details Card -->
+            <div class="drawer-store-card">
+                <div class="drawer-store-head">
+                    <div class="drawer-store-badge"><i class="fa-solid fa-shield-halved"></i> Verified Sangola Pharmacy</div>
+                    <span class="drawer-timing-tag">Open 24×7</span>
+                </div>
+                <p class="drawer-address-text"><i class="fa-solid fa-map-pin"></i> Near Wadhegaon Naka, Sangola, Solapur - 413307</p>
+                <div class="drawer-proprietor-row">
+                    <span>Proprietor: <strong>Mr. Siddhu Hazare</strong></span>
+                </div>
+                <div class="drawer-btn-grid">
+                    <a href="https://maps.app.goo.gl/nrZZWinitTmpLWyh8" target="_blank" rel="noopener noreferrer" class="drawer-sub-btn maps-btn">
+                        <i class="fa-solid fa-diamond-turn-right"></i> Maps Directions
+                    </a>
+                    <a href="tel:+918669118742" class="drawer-sub-btn call-btn">
+                        <i class="fa-solid fa-phone"></i> Direct Call
+                    </a>
+                </div>
+            </div>
+
+            <!-- Developer Credit Footer -->
+            <div class="drawer-credits">
+                <p>Designed & Developed by <strong>Rahul Sargar</strong></p>
+                <p class="drawer-version">Jankalyan Medical &bull; Official Digital Portal</p>
+            </div>
+        </div>
+        <div class="drawer-backdrop" id="drawer-backdrop" onclick="closeDrawer()"></div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Government Licensed & 100% Genuine Pharmacy</span>
+                </div>
+
+                <h1 class="hero-title">
+                    Sangola’s Trusted <br>
+                    <span class="gradient-text">24×7 Healthcare</span> & <br>
+                    Medicine Store
+                </h1>
+
+                <p class="hero-desc">
+                    Comprehensive selection of certified allopathic, ayurvedic, pediatric, and veterinary medicines. Serving Sangola families with unmatched care, professional pharmacist counsel, and rapid local delivery.
+                </p>
+
+                <!-- Key Category Pills -->
+                <div class="hero-categories">
+                    <div class="cat-pill">
+                        <i class="fa-solid fa-capsules"></i>
+                        <span>Allopathic Rx</span>
+                    </div>
+                    <div class="cat-pill">
+                        <i class="fa-solid fa-mortar-pestle"></i>
+                        <span>Ayurvedic</span>
+                    </div>
+                    <div class="cat-pill">
+                        <i class="fa-solid fa-baby"></i>
+                        <span>Pediatric Care</span>
+                    </div>
+                    <div class="cat-pill">
+                        <i class="fa-solid fa-paw"></i>
+                        <span>Veterinary</span>
+                    </div>
+                    <div class="cat-pill">
+                        <i class="fa-solid fa-spray-can-sparkles"></i>
+                        <span>Cosmetics</span>
+                    </div>
+                </div>
+
+                <div class="hero-cta-group">
+                    <a href="https://wa.me/918669118742?text=Hello%20Jankalyan%20Medical!%20I%20would%20like%20to%20order%20medicines%20or%20inquire%20about%20availability." target="_blank" rel="noopener noreferrer" class="btn-primary">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>Order via WhatsApp</span>
+                    </a>
+                    <button class="btn-secondary" onclick="openChatbot()">
+                        <i class="fa-solid fa-robot"></i>
+                        <span>Ask AI Pharmacist</span>
+                    </button>
+                    <a href="#availability" class="btn-outline">
+                        <i class="fa-solid fa-file-prescription"></i>
+                        <span>Check Stock</span>
+                    </a>
+                </div>
+
+                <!-- Live Store Stats -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">24×7</span>
+                        <span class="stat-label">Always Open</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Genuine Medicines</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">5,000+</span>
+                        <span class="stat-label">Sangola Families Served</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Image & Showcase -->
+            <div class="hero-media">
+                <div class="hero-card-wrapper">
+                    <img src="https://i.ibb.co/1YqVYJxG/medical-store-photo.jpg" alt="Jankalyan Medical Storefront Sangola" class="hero-main-img">
+                    
+                    <!-- Floating Overlays -->
+                    <div class="floating-badge badge-top">
+                        <div class="badge-icon green"><i class="fa-solid fa-truck-fast"></i></div>
+                        <div>
+                            <strong>Home Delivery</strong>
+                            <small>Sangola & nearby areas</small>
+                        </div>
+                    </div>
+
+                    <div class="floating-badge badge-bottom">
+                        <div class="badge-icon blue"><i class="fa-solid fa-certificate"></i></div>
+                        <div>
+                            <strong>Certified Pharmacist</strong>
+                            <small>Professional Guidance</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST PILLARS BAR -->
+    <section class="trust-bar">
+        <div class="trust-bar-container">
+            <div class="trust-item">
+                <div class="trust-icon"><i class="fa-solid fa-shield-check"></i></div>
+                <div>
+                    <h4>100% Genuine</h4>
+                    <p>Authentic sourced medicines</p>
+                </div>
+            </div>
+
+            <div class="trust-item">
+                <div class="trust-icon"><i class="fa-solid fa-clock"></i></div>
+                <div>
+                    <h4>24×7 Available</h4>
+                    <p>Day & night emergency service</p>
+                </div>
+            </div>
+
+            <div class="trust-item">
+                <div class="trust-icon"><i class="fa-solid fa-user-doctor"></i></div>
+                <div>
+                    <h4>Qualified Pharmacist</h4>
+                    <p>Safe dosage & guidance</p>
+                </div>
+            </div>
+
+            <div class="trust-item">
+                <div class="trust-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                <div>
+                    <h4>Fair Everyday Pricing</h4>
+                    <p>Best rates & generic options</p>
+                </div>
+            </div>
+
+            <div class="trust-item">
+                <div class="trust-icon"><i class="fa-solid fa-truck-medical"></i></div>
+                <div>
+                    <h4>Fast Delivery</h4>
+                    <p>Direct to your doorstep</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEDICINE CATEGORIES & SERVICES -->
+    <section class="services-section" id="services">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-pills"></i> Complete Inventory</span>
+                <h2 class="section-title">Healthcare & Medicine Categories</h2>
+                <p class="section-subtitle">Browse through our well-stocked medical pharmacy covering all patient needs from daily health to specialized veterinary care.</p>
+            </div>
+
+            <!-- Interactive Category Tabs -->
+            <div class="category-tabs" id="catalog-tabs">
+                <button class="tab-btn active" onclick="filterCategory('all', this)"><i class="fa-solid fa-grid-2"></i> All Categories</button>
+                <button class="tab-btn" onclick="filterCategory('allopathic', this)"><i class="fa-solid fa-capsules"></i> Allopathic Rx</button>
+                <button class="tab-btn" onclick="filterCategory('pediatric', this)"><i class="fa-solid fa-baby"></i> Pediatric & Baby</button>
+                <button class="tab-btn" onclick="filterCategory('ayurvedic', this)"><i class="fa-solid fa-leaf"></i> Ayurvedic & Herbal</button>
+                <button class="tab-btn" onclick="filterCategory('veterinary', this)"><i class="fa-solid fa-paw"></i> Veterinary Care</button>
+                <button class="tab-btn" onclick="filterCategory('surgical', this)"><i class="fa-solid fa-kit-medical"></i> Surgical & Diagnostic</button>
+            </div>
+
+            <div class="services-grid">
+                <!-- Allopathic -->
+                <div class="service-card" data-category="allopathic">
+                    <div class="card-badge">Daily & Chronic</div>
+                    <div class="service-icon-box teal">
+                        <i class="fa-solid fa-capsules"></i>
+                    </div>
+                    <h3>Adult & Prescription Medicine</h3>
+                    <p>Comprehensive inventory of doctor-prescribed pharmaceuticals, antibiotics, diabetes care, cardiovascular, hypertension, and pain management medications.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Cardiac & Blood Pressure Care</li>
+                        <li><i class="fa-solid fa-check"></i> Diabetes & Insulin Management</li>
+                        <li><i class="fa-solid fa-check"></i> Pain Relief, Antibiotics & Antacids</li>
+                        <li><i class="fa-solid fa-check"></i> Multivitamins & Mineral Supplements</li>
+                    </ul>
+                    <button class="card-action-btn" onclick="fillMedicineInquiry('Prescription Allopathic Medicine')">
+                        <span>Inquire Availability</span> <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Children / Pediatric -->
+                <div class="service-card" data-category="pediatric">
+                    <div class="card-badge">Gentle & Safe</div>
+                    <div class="service-icon-box blue">
+                        <i class="fa-solid fa-baby"></i>
+                    </div>
+                    <h3>Children & Pediatric Care</h3>
+                    <p>Specially formulated syrups, infant drops, fever suspensions, baby skin care, digestive aids, and pediatric nutritional supplements from top brands.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Pediatric Fever & Cold Drops</li>
+                        <li><i class="fa-solid fa-check"></i> Baby Nutrition & Growth Formulas</li>
+                        <li><i class="fa-solid fa-check"></i> Diaper Rash & Baby Skincare</li>
+                        <li><i class="fa-solid fa-check"></i> Immunity & Oral Rehydration</li>
+                    </ul>
+                    <button class="card-action-btn" onclick="fillMedicineInquiry('Pediatric Baby Healthcare')">
+                        <span>Inquire Availability</span> <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Animal / Veterinary -->
+                <div class="service-card" data-category="veterinary">
+                    <div class="card-badge">Livestock & Pets</div>
+                    <div class="service-icon-box green">
+                        <i class="fa-solid fa-paw"></i>
+                    </div>
+                    <h3>Veterinary & Animal Medicine</h3>
+                    <p>Complete veterinary solutions for farmers and pet owners in Sangola: cattle feed supplements, calcium tonics, dewormers, wound sprays, and pet healthcare.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Cattle & Livestock Mineral Mix</li>
+                        <li><i class="fa-solid fa-check"></i> High Potency Liquid Calcium</li>
+                        <li><i class="fa-solid fa-check"></i> Animal Dewormers & Antibiotics</li>
+                        <li><i class="fa-solid fa-check"></i> Pet Grooming & Domestic Animal Care</li>
+                    </ul>
+                    <button class="card-action-btn" onclick="fillMedicineInquiry('Veterinary Animal Medicine')">
+                        <span>Inquire Availability</span> <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Ayurvedic & Natural -->
+                <div class="service-card" data-category="ayurvedic">
+                    <div class="card-badge">Natural Wellness</div>
+                    <div class="service-icon-box emerald">
+                        <i class="fa-solid fa-mortar-pestle"></i>
+                    </div>
+                    <h3>Ayurvedic & Herbal Wellness</h3>
+                    <p>Authentic classical and proprietary Ayurvedic formulations from trusted brands like Dabur, Baidyanath, Himalaya, Patanjali, and Charak.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Chyawanprash & Immunity Tonics</li>
+                        <li><i class="fa-solid fa-check"></i> Joint Pain Oils & Herbal Balms</li>
+                        <li><i class="fa-solid fa-check"></i> Digestive Syrups & Herbal Teas</li>
+                        <li><i class="fa-solid fa-check"></i> Pure Ashwagandha, Giloy & Triphala</li>
+                    </ul>
+                    <button class="card-action-btn" onclick="fillMedicineInquiry('Ayurvedic Medicine')">
+                        <span>Inquire Availability</span> <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Surgical & Diagnostic -->
+                <div class="service-card" data-category="surgical">
+                    <div class="card-badge">Equipment & First Aid</div>
+                    <div class="service-icon-box purple">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3>Surgical & Diagnostic Devices</h3>
+                    <p>Clinical diagnostic equipment, home health monitoring kits, orthopedic braces, wound dressing materials, and surgical consumables.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Digital BP Monitors & Glucometers</li>
+                        <li><i class="fa-solid fa-check"></i> Pulse Oximeters & Thermometers</li>
+                        <li><i class="fa-solid fa-check"></i> Orthopedic Belts, Crepe Bandages</li>
+                        <li><i class="fa-solid fa-check"></i> Sterile Gauze, Syringes & Antiseptics</li>
+                    </ul>
+                    <button class="card-action-btn" onclick="fillMedicineInquiry('Surgical Diagnostic Device')">
+                        <span>Inquire Availability</span> <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Cosmetics & Personal Care -->
+                <div class="service-card" data-category="allopathic">
+                    <div class="card-badge">Daily Care</div>
+                    <div class="service-icon-box orange">
+                        <i class="fa-solid fa-pump-soap"></i>
+                    </div>
+                    <h3>Cosmetics & Personal Hygiene</h3>
+                    <p>Dermatologist-recommended skin creams, sunscreens, medicated shampoos, oral care products, sanitizers, and daily wellness essentials.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Medicated Skincare & Antifungal</li>
+                        <li><i class="fa-solid fa-check"></i> Antidandruff & Haircare Solutions</li>
+                        <li><i class="fa-solid fa-check"></i> Sun protection & Hydration</li>
+                        <li><i class="fa-solid fa-check"></i> Feminine Hygiene & Sanitization</li>
+                    </ul>
+                    <button class="card-action-btn" onclick="fillMedicineInquiry('Cosmetics Personal Care')">
+                        <span>Inquire Availability</span> <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI PHARMACIST SPOTLIGHT SECTION -->
+    <section class="ai-banner-section">
+        <div class="ai-banner-container">
+            <div class="ai-banner-card">
+                <div class="ai-banner-grid">
+                    <div class="ai-banner-text">
+                        <div class="ai-pill"><i class="fa-solid fa-brain"></i> Powered by Gemini AI</div>
+                        <h2>Meet Your 24×7 AI Medical Pharmacist</h2>
+                        <p>Got a question about a medicine, dosage, store timings, or Sangola location? Our intelligent digital assistant is available around the clock to give you immediate answers.</p>
+                        
+                        <div class="ai-capabilities">
+                            <div class="ai-cap-item">
+                                <i class="fa-solid fa-capsules"></i>
+                                <span>Explain medicine uses and common precautions</span>
+                            </div>
+                            <div class="ai-cap-item">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>Check 24x7 store timings and Sangola location</span>
+                            </div>
+                            <div class="ai-cap-item">
+                                <i class="fa-solid fa-truck-fast"></i>
+                                <span>Inquire about home delivery and ordering steps</span>
+                            </div>
+                            <div class="ai-cap-item">
+                                <i class="fa-solid fa-heart-circle-bolt"></i>
+                                <span>Provide BMI analysis and general health tips</span>
+                            </div>
+                        </div>
+
+                        <div class="ai-prompt-chips">
+                            <span class="chip-label">Quick Prompts:</span>
+                            <button class="ai-chip" onclick="askAiQuick('What are the store timings and address of Jankalyan Medical?')">📍 Store Timings & Address</button>
+                            <button class="ai-chip" onclick="askAiQuick('Do you have home delivery in Sangola?')">🚚 Home Delivery Info</button>
+                            <button class="ai-chip" onclick="askAiQuick('What is Paracetamol used for and what are precautions?')">💊 Medicine Guidance</button>
+                            <button class="ai-chip" onclick="askAiQuick('Who is the owner and developer of this medical shop app?')">👨‍⚕️ Store Owner & Info</button>
+                        </div>
+
+                        <button class="btn-primary ai-launch-btn" onclick="openChatbot()">
+                            <i class="fa-solid fa-robot"></i>
+                            <span>Launch AI Assistant Now</span>
+                        </button>
+                    </div>
+
+                    <div class="ai-banner-visual">
+                        <div class="ai-chat-preview-card">
+                            <div class="preview-header">
+                                <div class="preview-avatar"><i class="fa-solid fa-robot"></i></div>
+                                <div>
+                                    <strong>Jankalyan AI Assistant</strong>
+                                    <small>🟢 Online • Instant Response</small>
+                                </div>
+                            </div>
+                            <div class="preview-bubble bot">
+                                <span>Namaste! I am Jankalyan Medical's AI Assistant. How can I help you today with your medicines or store inquiries?</span>
+                            </div>
+                            <div class="preview-bubble user">
+                                <span>Is Jankalyan Medical open right now?</span>
+                            </div>
+                            <div class="preview-bubble bot">
+                                <span>Yes! Jankalyan Medical is open <strong>24x7 hrs every single day</strong> near Wadhegaon Naka, Sangola. Walk in anytime or message us on WhatsApp!</span>
+                            </div>
+                            <div class="preview-input-bar">
+                                <span>Type your healthcare question...</span>
+                                <button onclick="openChatbot()"><i class="fa-solid fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEDICINE AVAILABILITY & QUICK WHATSAPP ORDER -->
+    <section class="availability-section" id="availability">
+        <div class="section-container">
+            <div class="availability-grid">
+                
+                <!-- Left: Info & Guidelines -->
+                <div class="avail-info-col">
+                    <span class="section-tag"><i class="fa-solid fa-whatsapp"></i> Express WhatsApp Service</span>
+                    <h2 class="section-title">Check Medicine Stock & Order Online</h2>
+                    <p>Have a doctor's prescription or looking for a specific tablet, syrup, veterinary supplement, or baby formula? Submit your request below or send a photo of your prescription directly to our WhatsApp hotline.</p>
+
+                    <div class="order-perks">
+                        <div class="perk-card">
+                            <div class="perk-icon"><i class="fa-solid fa-bolt"></i></div>
+                            <div>
+                                <h4>Instant Response</h4>
+                                <p>Our pharmacist confirms stock availability within minutes.</p>
+                            </div>
+                        </div>
+
+                        <div class="perk-card">
+                            <div class="perk-icon"><i class="fa-solid fa-camera"></i></div>
+                            <div>
+                                <h4>Prescription Photo Accepted</h4>
+                                <p>You can also send your prescription photo directly on WhatsApp.</p>
+                            </div>
+                        </div>
+
+                        <div class="perk-card">
+                            <div class="perk-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                            <div>
+                                <h4>Free Home Delivery</h4>
+                                <p>Available for Sangola town with safe packaging.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="direct-phone-box">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <div>
+                            <span>Prefer Calling Directly?</span>
+                            <a href="tel:+918669118742">+91 86691 18742</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Form -->
+                <div class="avail-form-col">
+                    <div class="form-card">
+                        <div class="form-header">
+                            <div class="form-header-icon"><i class="fa-solid fa-file-medical"></i></div>
+                            <div>
+                                <h3>Medicine Inquiry Form</h3>
+                                <p>Fills in your WhatsApp message automatically</p>
+                            </div>
+                        </div>
+
+                        <form id="medForm">
+                            <div class="form-group">
+                                <label for="custName"><i class="fa-solid fa-user"></i> Your Full Name</label>
+                                <input type="text" id="custName" placeholder="e.g. Ramesh Patil" required>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="custPhone"><i class="fa-solid fa-phone"></i> Mobile Number (Optional)</label>
+                                    <input type="tel" id="custPhone" placeholder="10-digit mobile number">
+                                </div>
+                                <div class="form-group">
+                                    <label for="orderType"><i class="fa-solid fa-box"></i> Fulfillment</label>
+                                    <select id="orderType">
+                                        <option value="Store Pickup">Store Pickup</option>
+                                        <option value="Home Delivery in Sangola">Home Delivery in Sangola</option>
+                                        <option value="Urgent Emergency Delivery">Urgent Emergency Delivery</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="medName"><i class="fa-solid fa-capsules"></i> Medicine Name(s) / Product Required</label>
+                                <input type="text" id="medName" placeholder="e.g. Paracetamol 650, Telmisartan 40mg, Ostovet 1L" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message"><i class="fa-solid fa-notes-medical"></i> Additional Notes / Dosage / Quantity</label>
+                                <textarea id="message" rows="3" placeholder="Enter strip quantity, brand preference, or address for home delivery..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-whatsapp-submit">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span>Send Order to WhatsApp Hotline</span>
+                            </button>
+                            <p class="form-disclaimer"><i class="fa-solid fa-lock"></i> Direct connection to official Jankalyan WhatsApp: <strong>86691 18742</strong></p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CLINICAL BMI CALCULATOR & HEALTH METRIC -->
+    <section class="bmi-section" id="bmi">
+        <div class="section-container">
+            <div class="bmi-grid">
+                
+                <div class="bmi-calc-card">
+                    <div class="bmi-card-header">
+                        <span class="section-tag"><i class="fa-solid fa-heart-circle-check"></i> Health Wellness Tool</span>
+                        <h2>Body Mass Index (BMI) Calculator</h2>
+                        <p>Calculate your BMI score according to World Health Organization (WHO) medical guidelines to understand your physical health status.</p>
+                    </div>
+
+                    <div class="bmi-input-grid">
+                        <div class="bmi-input-group">
+                            <label for="weight"><i class="fa-solid fa-weight-scale"></i> Weight (kg)</label>
+                            <div class="input-with-unit">
+                                <input type="number" id="weight" placeholder="e.g. 68" min="10" max="300" step="0.5">
+                                <span class="unit-badge">kg</span>
+                            </div>
+                        </div>
+
+                        <div class="bmi-input-group">
+                            <label for="height"><i class="fa-solid fa-ruler-vertical"></i> Height (cm)</label>
+                            <div class="input-with-unit">
+                                <input type="number" id="height" placeholder="e.g. 172" min="50" max="250" step="1">
+                                <span class="unit-badge">cm</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bmi-actions">
+                        <button class="btn-primary" onclick="calculateBMI()">
+                            <i class="fa-solid fa-calculator"></i>
+                            <span>Calculate BMI Score</span>
+                        </button>
+                        <button class="btn-outline-sm" onclick="resetBMI()">
+                            <i class="fa-solid fa-rotate-left"></i>
+                            <span>Reset</span>
+                        </button>
+                    </div>
+
+                    <!-- Interactive Result Container -->
+                    <div id="bmi-result-card" class="bmi-result-box" style="display: none;">
+                        <div class="result-header">
+                            <div>
+                                <span class="result-label">Your BMI Score:</span>
+                                <h3 id="result-score" class="result-score">22.4</h3>
+                            </div>
+                            <div id="result-status-pill" class="status-pill normal">
+                                <span id="result-category">Normal Weight</span>
+                            </div>
+                        </div>
+
+                        <!-- Visual Meter Gauge -->
+                        <div class="bmi-meter">
+                            <div class="meter-bar">
+                                <div class="meter-segment under" title="Underweight (< 18.5)"></div>
+                                <div class="meter-segment normal" title="Normal (18.5 - 24.9)"></div>
+                                <div class="meter-segment over" title="Overweight (25.0 - 29.9)"></div>
+                                <div class="meter-segment obese" title="Obese (≥ 30)"></div>
+                            </div>
+                            <div id="meter-marker" class="meter-marker" style="left: 35%;"></div>
+                        </div>
+                        <div class="meter-labels">
+                            <span>Underweight (&lt;18.5)</span>
+                            <span>Normal (18.5-24.9)</span>
+                            <span>Overweight (25-29.9)</span>
+                            <span>Obese (&ge;30)</span>
+                        </div>
+
+                        <div class="result-details" id="result-details">
+                            <p id="result-advice">Your body weight is within the healthy medical range. Keep up balanced nutrition and regular physical activity!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BMI Reference Guide -->
+                <div class="bmi-guide-card">
+                    <h3><i class="fa-solid fa-notes-medical"></i> Understanding Your BMI</h3>
+                    <p>Body Mass Index is a screening tool used by healthcare practitioners to estimate body fat for adult men and women.</p>
+
+                    <div class="guide-table">
+                        <div class="guide-row under">
+                            <span class="guide-range">&lt; 18.5</span>
+                            <span class="guide-label">Underweight</span>
+                            <span class="guide-desc">May require nutritional supplements</span>
+                        </div>
+                        <div class="guide-row normal">
+                            <span class="guide-range">18.5 – 24.9</span>
+                            <span class="guide-label">Normal / Healthy</span>
+                            <span class="guide-desc">Optimal healthy weight range</span>
+                        </div>
+                        <div class="guide-row over">
+                            <span class="guide-range">25.0 – 29.9</span>
+                            <span class="guide-label">Overweight</span>
+                            <span class="guide-desc">Cardiovascular & fitness attention advised</span>
+                        </div>
+                        <div class="guide-row obese">
+                            <span class="guide-range">&ge; 30.0</span>
+                            <span class="guide-label">Obese</span>
+                            <span class="guide-desc">Consult a doctor for metabolic care</span>
+                        </div>
+                    </div>
+
+                    <div class="pharmacy-health-tip">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <div>
+                            <strong>Need Vitamins or Diet Supplements?</strong>
+                            <p>Ask our certified pharmacist at Jankalyan Medical for daily multivitamins, protein powders, and wellness care.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- STORE PHOTO GALLERY -->
+    <section class="gallery-section" id="gallery">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-camera"></i> Authentic Store Photos</span>
+                <h2 class="section-title">Jankalyan Medical Gallery</h2>
+                <p class="section-subtitle">Take a look inside our clean, well-organized pharmacy store equipped with modern refrigeration and extensive medicine stock in Sangola.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="https://i.ibb.co/8LhnVpcj/IMG-20260623-WA0045.jpg" alt="Jankalyan Medical Medicine Storage Racks Sangola" loading="lazy">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>Allopathic & Prescription Counter</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="https://i.ibb.co/JWVJMDT7/IMG-20260623-WA0056.jpg" alt="Jankalyan Medical Store Dispensary" loading="lazy">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>Dispensary & Pharmacist Desk</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="https://i.ibb.co/6JB8yLK2/IMG-20260623-WA0063.jpg" alt="Jankalyan Medical Store Front View" loading="lazy">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>Organized Inventory & Supplies</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="https://i.ibb.co/jv2PdcJc/IMG-20260623-WA0060.jpg" alt="Jankalyan Medical Customer Service Area" loading="lazy">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>Customer Service Counter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US / TRUST SECTION -->
+    <section class="why-us-section" id="trust">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-award"></i> Quality & Commitment</span>
+                <h2 class="section-title">Why Families in Sangola Trust Jankalyan Medical</h2>
+                <p class="section-subtitle">Dedicated to providing reliable pharmaceutical care with transparency, integrity, and round-the-clock availability.</p>
+            </div>
+
+            <div class="trust-grid">
+                <div class="why-card">
+                    <div class="why-icon-box"><i class="fa-solid fa-certificate"></i></div>
+                    <h3>100% Genuine & Certified</h3>
+                    <p>Every single strip, vial, and syrup is procured strictly from licensed pharmaceutical distributors and leading manufacturers.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon-box"><i class="fa-solid fa-snowflake"></i></div>
+                    <h3>Cold Chain Temperature Control</h3>
+                    <p>Dedicated medical refrigeration maintains optimal temperature for insulins, vaccines, pediatric drops, and sensitive serums.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon-box"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                    <h3>24×7 Emergency Support</h3>
+                    <p>Never worry about late-night medical emergencies. Our pharmacy is open 24 hours every single day for the Sangola community.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon-box"><i class="fa-solid fa-robot"></i></div>
+                    <h3>AI-Powered Healthcare Guide</h3>
+                    <p>Our smart Gemini AI assistant helps you learn medicine uses, precautions, and store details from anywhere at any time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / CONTACT & MAPS SECTION -->
+    <footer class="site-footer" id="contact">
+        <div class="footer-top">
+            <div class="footer-container">
+                
+                <!-- Col 1: Store Intro -->
+                <div class="footer-col brand-col">
+                    <div class="footer-logo">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                        <span>Jankalyan Medical</span>
+                    </div>
+                    <p class="footer-desc">Sangola's trusted 24×7 medical store offering genuine allopathic, ayurvedic, pediatric, and veterinary medicines with compassionate care and express delivery.</p>
+                    
+                    <div class="owner-pill">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <span>Proprietor: <strong>Mr. Siddhu Hazare</strong></span>
+                    </div>
+
+                    <div class="footer-socials">
+                        <a href="https://instagram.com/jankalyan_medical_sangola_42" target="_blank" rel="noopener noreferrer" class="social-btn instagram" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/918669118742" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="https://maps.app.goo.gl/nrZZWinitTmpLWyh8" target="_blank" rel="noopener noreferrer" class="social-btn maps" aria-label="Google Maps">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="footer-col">
+                    <h4>Quick Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+                        <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Medicine Catalog</a></li>
+                        <li><a href="#availability"><i class="fa-solid fa-angle-right"></i> Check Availability & Order</a></li>
+                        <li><a href="#bmi"><i class="fa-solid fa-angle-right"></i> BMI Health Calculator</a></li>
+                        <li><a href="#gallery"><i class="fa-solid fa-angle-right"></i> Store Photos</a></li>
+                        <li><a href="#trust"><i class="fa-solid fa-angle-right"></i> Why Trust Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Contact & Hours -->
+                <div class="footer-col">
+                    <h4>Contact & Hours</h4>
+                    <div class="footer-contact-list">
+                        <div class="f-contact-item">
+                            <i class="fa-solid fa-clock"></i>
+                            <div>
+                                <strong>Operating Hours:</strong>
+                                <p>Open 24 Hours / 7 Days a Week</p>
+                            </div>
+                        </div>
+                        <div class="f-contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <strong>Call Hotline:</strong>
+                                <p><a href="tel:+918669118742">+91 86691 18742</a></p>
+                            </div>
+                        </div>
+                        <div class="f-contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <strong>Email Inquiries:</strong>
+                                <p><a href="mailto:janaklyanmedicalstore@gmail.com">janaklyanmedicalstore@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col 4: Location & Map -->
+                <div class="footer-col">
+                    <h4>Store Location</h4>
+                    <div class="f-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong>Physical Address:</strong>
+                            <p>Near Wadhegaon Naka, Sangola, Dist. Solapur, Maharashtra - 413307</p>
+                        </div>
+                    </div>
+                    <a href="https://maps.app.goo.gl/nrZZWinitTmpLWyh8" target="_blank" rel="noopener noreferrer" class="map-action-btn">
+                        <i class="fa-solid fa-diamond-turn-right"></i>
+                        <span>Get Directions on Google Maps</span>
+                    </a>
+
+                    <!-- Developer info -->
+                    <div class="dev-card">
+                        <div class="dev-header">
+                            <i class="fa-solid fa-code"></i>
+                            <div>
+                                <small>Designed & Developed by</small>
+                                <strong>Rahul Sargar</strong>
+                            </div>
+                        </div>
+                        <div class="dev-links">
+                            <a href="mailto:sargarrahul428@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+                            <a href="https://instagram.com/rahul_sargar_08" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> @rahul_sargar_08</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-container bottom-flex">
+                <p>&copy; 2026 <strong>Jankalyan Medical, Sangola</strong>. All Rights Reserved.</p>
+                <p class="med-disclaimer">Disclaimer: Information provided by AI is for educational reference. Always consult a qualified medical doctor or registered pharmacist for clinical diagnosis.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING AI ASSISTANT ROBOT TRIGGER -->
+    <div id="ai-btn" class="floating-ai-trigger" onclick="toggleChatbot()" title="Open AI Pharmacist Assistant">
+        <div class="ai-trigger-icon">
+            <i class="fa-solid fa-robot"></i>
+        </div>
+        <span class="ai-trigger-label">Ask AI</span>
+        <span class="online-indicator"></span>
+    </div>
+
+    <!-- CHATBOT BACKDROP FOR MOBILE & DESKTOP -->
+    <div class="chat-backdrop" id="chat-backdrop" onclick="closeChatbot()"></div>
+
+    <!-- MODERN AI PHARMACIST MODAL -->
+    <div class="chatbot-container" id="chatbot">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="chat-avatar"><i class="fa-solid fa-robot"></i></div>
+                <div>
+                    <h4>Jankalyan AI Assistant</h4>
+                    <span class="chat-online-tag"><span class="pulse-dot-sm"></span> Online • 24x7 Support</span>
+                </div>
+            </div>
+            <div class="chat-header-actions">
+                <button class="chat-action-icon" onclick="clearChatHistory()" title="Clear Chat"><i class="fa-solid fa-rotate-left"></i></button>
+                <button class="chat-action-icon" id="close-chat" onclick="closeChatbot()" title="Close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+
+        <div class="chat-quick-bar">
+            <button onclick="askAiQuick('What are the store timings and location?')">⏰ Timings & Location</button>
+            <button onclick="askAiQuick('How can I order medicines for home delivery?')">📦 Home Delivery</button>
+            <button onclick="askAiQuick('Who is the store owner and developer?')">ℹ️ Store Info</button>
+        </div>
+
+        <div class="chat-body" id="chat-body">
+            <div class="chat-msg bot">
+                <div class="msg-avatar"><i class="fa-solid fa-robot"></i></div>
+                <div class="msg-content">
+                    <p>Namaste! I am <strong>Jankalyan Medical's AI Assistant</strong> in Sangola.</p>
+                    <p>I can help you with:</p>
+                    <ul>
+                        <li>💊 Medicine uses & precautions</li>
+                        <li>⏰ 24x7 Store timings & address</li>
+                        <li>🚚 Home delivery & order guidance</li>
+                        <li>📏 Health guidance & wellness tips</li>
+                    </ul>
+                    <p>How can I assist you right now?</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-footer">
+            <form id="chatForm" onsubmit="event.preventDefault(); sendMessage();" class="chat-form-inner">
+                <input
+                    type="text"
+                    id="chat-input"
+                    placeholder="Ask about medicines, timings, delivery..."
+                    autocomplete="off"
+                >
+                <button type="submit" id="chat-send-btn" aria-label="Send message">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MOBILE BOTTOM APP NAVIGATION BAR (<= 768px) -->
+    <nav class="mobile-bottom-bar" id="mobile-bottom-bar" aria-label="Mobile Bottom Navigation">
+        <a href="#home" class="bottom-nav-item active" id="bnav-home">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="#services" class="bottom-nav-item" id="bnav-services">
+            <i class="fa-solid fa-pills"></i>
+            <span>Medicines</span>
+        </a>
+        <button class="bottom-nav-center-btn" onclick="openChatbot()" aria-label="Open AI Pharmacist Assistant">
+            <div class="bottom-ai-spark">
+                <i class="fa-solid fa-robot"></i>
+            </div>
+            <span>Ask AI</span>
+        </button>
+        <a href="#availability" class="bottom-nav-item" id="bnav-order">
+            <i class="fa-solid fa-truck-medical"></i>
+            <span>Order</span>
+        </a>
+        <a href="tel:+918669118742" class="bottom-nav-item" id="bnav-call">
+            <i class="fa-solid fa-phone"></i>
+            <span>Call</span>
+        </a>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
+
