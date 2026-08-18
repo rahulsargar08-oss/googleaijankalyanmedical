@@ -1,0 +1,15 @@
+{
+  "name": "jankalyan-medical-store",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "node -e \"console.log('Build ok')\"",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@google/genai": "*",
+    "express": "^4.21.2"
+  }
+}
