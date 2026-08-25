@@ -1,8 +1,0 @@
-{
-  "name": "Jankalyan Medical Sangola",
-  "description": "Sangola's trusted medical store website with AI medical assistant, medicine availability check, BMI calculator, and service details.",
-  "requestFramePermissions": [],
-  "majorCapabilities": [
-    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
-  ]
-}
