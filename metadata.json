@@ -1,8 +1,0 @@
-{
-  "name": "Jankalyan Medical Sangola",
-  "description": "Sangola's trusted 24x7 medical store website with AI medical pharmacist, customer medicine inquiry management with Supabase cloud database, and admin portal.",
-  "requestFramePermissions": [],
-  "majorCapabilities": [
-    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
-  ]
-}
