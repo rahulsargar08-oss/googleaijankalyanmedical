@@ -1,0 +1,2634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sangola's trusted 24x7 medical store website with AI medical pharmacist, customer medicine registry, Supabase cloud database, and admin portal featuring live medicine stock management, batch expiry tracking, and Supabase SQL schema generator.">
+    <meta name="keywords" content="Jankalyan Medical Sangola, Pharmacy in Sangola, 24x7 Medical Store Sangola, Wadhegaon Naka Medical, Allopathic, Ayurvedic, Veterinary Medicine Sangola, Medicine Stock Management">
+    <meta name="author" content="Rahul Sargar">
+    <link rel="canonical" href="https://www.jankalyanmedical.store/">
+    <meta property="og:title" content="Jankalyan Medical Sangola - 24x7 Community Pharmacy">
+    <meta property="og:description" content="Sangola's trusted 24x7 medical store website with AI medical pharmacist, customer medicine registry, Supabase cloud database, and admin portal featuring live medicine stock management, batch expiry tracking, and Supabase SQL schema generator.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.jankalyanmedical.store/">
+    <title>Jankalyan Medical | 24x7 Certified Pharmacy in Sangola</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6.6.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Announcement & Contact Bar -->
+    <div class="top-bar" id="top-bar">
+        <div class="top-bar-container">
+            <div class="top-bar-left">
+                <span class="status-badge"><span class="pulse-dot"></span> 24×7 SANGOLA HEALTHCARE HUB</span>
+                <span class="top-bar-divider"></span>
+                <span class="top-bar-location"><i class="fa-solid fa-location-dot"></i> Near Wadhegaon Naka, Sangola - 413307</span>
+            </div>
+            <div class="top-bar-right">
+                <span class="live-clock-badge" id="live-clock-badge"><i class="fa-regular fa-clock"></i> <span id="sangola-live-time">Sangola: Open Now</span></span>
+                <span class="top-bar-divider"></span>
+                <a href="tel:+918669118742" class="top-link"><i class="fa-solid fa-phone"></i> +91 86691 18742</a>
+                <span class="top-bar-divider"></span>
+                <a href="https://wa.me/918669118742?text=Hello%20Jankalyan%20Medical!%20I%20need%20assistance%20with%20medicines." target="_blank" rel="noopener noreferrer" class="top-link top-wa">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp Hotline
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header id="main-header" class="main-header">
+        <div class="nav-container">
+            <!-- Brand Logo -->
+            <a href="#home" class="logo" aria-label="Jankalyan Medical Home">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-notes-medical"></i>
+                </div>
+                <div class="logo-text">
+                    <div class="brand-title">JANKALYAN <span class="brand-accent">MEDICAL</span></div>
+                    <div class="brand-tagline">24×7 Certified Pharmacy &bull; Sangola</div>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#services" class="nav-link">Medicines</a></li>
+                    <li><a href="#availability" class="nav-link">Order</a></li>
+                    <li><a href="#bmi" class="nav-link">BMI</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Action Controls -->
+            <div class="header-actions">
+                <button class="btn-ai-header" id="header-ai-btn" onclick="openChatbot()" title="Chat with AI Pharmacist">
+                    <div class="ai-spark-icon"><i class="fa-solid fa-robot"></i></div>
+                    <span class="ai-btn-text">AI Pharmacist</span>
+                </button>
+                <a href="https://wa.me/918669118742?text=Hello%20Jankalyan%20Medical!%20I%20want%20to%20order%20medicine." target="_blank" rel="noopener noreferrer" class="btn-order-header">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Order Now</span>
+                </a>
+                <button class="mobile-toggle" id="mobile-menu" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="bar bar-1"></span>
+                    <span class="bar bar-2"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- REIMAGINED NEO-CLINICAL MOBILE NAVIGATION DRAWER -->
+        <div class="mobile-nav-drawer" id="mobile-drawer">
+            <!-- Drawer Brand Banner -->
+            <div class="drawer-header-card">
+                <div class="drawer-brand-wrap">
+                    <div class="drawer-logo-icon">
+                        <i class="fa-solid fa-notes-medical"></i>
+                    </div>
+                    <div>
+                        <div class="drawer-brand-sub">SANGOLA PHARMACY</div>
+                        <h3 class="drawer-brand-name">JANKALYAN <span>MEDICAL</span></h3>
+                    </div>
+                </div>
+                <button class="drawer-close-btn" id="drawer-close" aria-label="Close navigation menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- 24x7 Live Status Bar -->
+            <div class="drawer-live-bar">
+                <span class="pulse-dot"></span>
+                <span class="drawer-live-text">OPEN RIGHT NOW IN SANGOLA &bull; 24×7 DISPATCH</span>
+            </div>
+
+            <!-- Quick Action Hub -->
+            <div class="drawer-quick-actions">
+                <a href="tel:+918669118742" class="drawer-action-tile call-tile">
+                    <div class="tile-icon-circle"><i class="fa-solid fa-phone"></i></div>
+                    <div class="tile-info">
+                        <strong>Call 24×7 Hotline</strong>
+                        <small>+91 86691 18742</small>
+                    </div>
+                </a>
+                <a href="https://wa.me/918669118742?text=Hello%20Jankalyan%20Medical!%20I%20want%20to%20order%20medicines." target="_blank" rel="noopener noreferrer" class="drawer-action-tile wa-tile">
+                    <div class="tile-icon-circle"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div class="tile-info">
+                        <strong>WhatsApp Order</strong>
+                        <small>Send Prescription Rx</small>
+                    </div>
+                </a>
+                <button onclick="openChatbot(); closeDrawer();" class="drawer-action-tile ai-tile">
+                    <div class="tile-icon-circle"><i class="fa-solid fa-robot"></i></div>
+                    <div class="tile-info">
+                        <strong>AI Pharmacist</strong>
+                        <small>Ask Medicines & Info</small>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Numbered Editorial Navigation Links -->
+            <div class="drawer-nav-sections">
+                <div class="drawer-section-title">NAVIGATION DIRECTORY</div>
+                <ul class="drawer-links">
+                    <li>
+                        <a href="#home" class="drawer-item active">
+                            <span class="drawer-num">01</span>
+                            <div class="drawer-item-content">
+                                <span class="drawer-item-title">Home</span>
+                                <span class="drawer-item-sub">Store Overview & Fast Search</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-right-long drawer-arrow"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services" class="drawer-item">
+                            <span class="drawer-num">02</span>
+                            <div class="drawer-item-content">
+                                <span class="drawer-item-title">Medicines</span>
+                                <span class="drawer-item-sub">Allopathic, Ayurvedic & Veterinary</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-right-long drawer-arrow"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#availability" class="drawer-item">
+                            <span class="drawer-num">03</span>
+                            <div class="drawer-item-content">
+                                <span class="drawer-item-title">Order</span>
+                                <span class="drawer-item-sub">Direct WhatsApp Dispense Form</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-right-long drawer-arrow"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#bmi" class="drawer-item">
+                            <span class="drawer-num">04</span>
+                            <div class="drawer-item-content">
+                                <span class="drawer-item-title">BMI Calculator</span>
+                                <span class="drawer-item-sub">Check Body Mass Index & Advice</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-right-long drawer-arrow"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#gallery" class="drawer-item">
+                            <span class="drawer-num">05</span>
+                            <div class="drawer-item-content">
+                                <span class="drawer-item-title">Gallery</span>
+                                <span class="drawer-item-sub">Real Inside & Outside Store Photos</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-right-long drawer-arrow"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#trust" class="drawer-item">
+                            <span class="drawer-num">06</span>
+                            <div class="drawer-item-content">
+                                <span class="drawer-item-title">Why Trust Us</span>
+                                <span class="drawer-item-sub">Govt Lic. 100% Genuine Pharmacy</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-right-long drawer-arrow"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="drawer-item">
+                            <span class="drawer-num">07</span>
+                            <div class="drawer-item-content">
+                                <span class="drawer-item-title">Location & Contact</span>
+                                <span class="drawer-item-sub">Wadhegaon Naka, Sangola 413307</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-right-long drawer-arrow"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Drawer Store Details Card -->
+            <div class="drawer-store-card">
+                <div class="drawer-store-head">
+                    <div class="drawer-store-badge"><i class="fa-solid fa-shield-halved"></i> Verified Sangola Pharmacy</div>
+                    <span class="drawer-timing-tag">Open 24×7</span>
+                </div>
+                <p class="drawer-address-text"><i class="fa-solid fa-map-pin"></i> Near Wadhegaon Naka, Sangola, Solapur - 413307</p>
+                <div class="drawer-proprietor-row">
+                    <span>Proprietor: <strong>Mr. Siddhu Hajare</strong></span>
+                </div>
+                <div class="drawer-btn-grid">
+                    <a href="https://maps.app.goo.gl/nrZZWinitTmpLWyh8" target="_blank" rel="noopener noreferrer" class="drawer-sub-btn maps-btn">
+                        <i class="fa-solid fa-diamond-turn-right"></i> Maps Directions
+                    </a>
+                    <a href="tel:+918669118742" class="drawer-sub-btn call-btn">
+                        <i class="fa-solid fa-phone"></i> Direct Call
+                    </a>
+                </div>
+            </div>
+
+            <!-- Developer Credit Footer -->
+            <div class="drawer-credits">
+                <p>Designed & Developed by <strong>Rahul Sargar</strong></p>
+                <p class="drawer-version">Jankalyan Medical &bull; Official Digital Portal</p>
+            </div>
+        </div>
+        <div class="drawer-backdrop" id="drawer-backdrop" onclick="closeDrawer()"></div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Government Licensed & 100% Genuine Pharmacy</span>
+                </div>
+
+                <h1 class="hero-title">
+                    Sangola’s Trusted <br>
+                    <span class="gradient-text">24×7 Healthcare</span> & <br>
+                    Medicine Store
+                </h1>
+
+                <p class="hero-desc">
+                    Comprehensive selection of certified allopathic, ayurvedic, pediatric, and veterinary medicines. Serving Sangola families with unmatched care, professional pharmacist counsel, and rapid local delivery.
+                </p>
+
+                <!-- Key Category Pills -->
+                <div class="hero-categories">
+                    <div class="cat-pill">
+                        <i class="fa-solid fa-capsules"></i>
+                        <span>Allopathic Rx</span>
+                    </div>
+                    <div class="cat-pill">
+                        <i class="fa-solid fa-mortar-pestle"></i>
+                        <span>Ayurvedic</span>
+                    </div>
+                    <div class="cat-pill">
+                        <i class="fa-solid fa-baby"></i>
+                        <span>Pediatric Care</span>
+                    </div>
+                    <div class="cat-pill">
+                        <i class="fa-solid fa-paw"></i>
+                        <span>Veterinary</span>
+                    </div>
+                    <div class="cat-pill">
+                        <i class="fa-solid fa-spray-can-sparkles"></i>
+                        <span>Cosmetics</span>
+                    </div>
+                </div>
+
+                <div class="hero-cta-group">
+                    <a href="https://wa.me/918669118742?text=Hello%20Jankalyan%20Medical!%20I%20would%20like%20to%20order%20medicines%20or%20inquire%20about%20availability." target="_blank" rel="noopener noreferrer" class="btn-primary">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>Order via WhatsApp</span>
+                    </a>
+                    <button class="btn-secondary" onclick="openChatbot()">
+                        <i class="fa-solid fa-robot"></i>
+                        <span>Ask AI Pharmacist</span>
+                    </button>
+                    <a href="#availability" class="btn-outline">
+                        <i class="fa-solid fa-file-prescription"></i>
+                        <span>Check Stock</span>
+                    </a>
+                </div>
+
+                <!-- Live Store Stats -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">24×7</span>
+                        <span class="stat-label">Always Open</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Genuine Medicines</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">5,000+</span>
+                        <span class="stat-label">Sangola Families Served</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Image & Showcase -->
+            <div class="hero-media">
+                <div class="hero-card-wrapper">
+                    <img src="https://i.ibb.co/1YqVYJxG/medical-store-photo.jpg" alt="Jankalyan Medical Storefront Sangola" class="hero-main-img">
+                    
+                    <!-- Floating Overlays -->
+                    <div class="floating-badge badge-top">
+                        <div class="badge-icon green"><i class="fa-solid fa-truck-fast"></i></div>
+                        <div>
+                            <strong>Home Delivery</strong>
+                            <small>Sangola & nearby areas</small>
+                        </div>
+                    </div>
+
+                    <div class="floating-badge badge-bottom">
+                        <div class="badge-icon blue"><i class="fa-solid fa-certificate"></i></div>
+                        <div>
+                            <strong>Certified Pharmacist</strong>
+                            <small>Professional Guidance</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST PILLARS BAR -->
+    <section class="trust-bar">
+        <div class="trust-bar-container">
+            <div class="trust-item">
+                <div class="trust-icon"><i class="fa-solid fa-shield-check"></i></div>
+                <div>
+                    <h4>100% Genuine</h4>
+                    <p>Authentic sourced medicines</p>
+                </div>
+            </div>
+
+            <div class="trust-item">
+                <div class="trust-icon"><i class="fa-solid fa-clock"></i></div>
+                <div>
+                    <h4>24×7 Available</h4>
+                    <p>Day & night emergency service</p>
+                </div>
+            </div>
+
+            <div class="trust-item">
+                <div class="trust-icon"><i class="fa-solid fa-user-doctor"></i></div>
+                <div>
+                    <h4>Qualified Pharmacist</h4>
+                    <p>Safe dosage & guidance</p>
+                </div>
+            </div>
+
+            <div class="trust-item">
+                <div class="trust-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                <div>
+                    <h4>Fair Everyday Pricing</h4>
+                    <p>Best rates & generic options</p>
+                </div>
+            </div>
+
+            <div class="trust-item">
+                <div class="trust-icon"><i class="fa-solid fa-truck-medical"></i></div>
+                <div>
+                    <h4>Fast Delivery</h4>
+                    <p>Direct to your doorstep</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEDICINE CATEGORIES & SERVICES -->
+    <section class="services-section" id="services">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-pills"></i> Complete Inventory</span>
+                <h2 class="section-title">Healthcare & Medicine Categories</h2>
+                <p class="section-subtitle">Browse through our well-stocked medical pharmacy covering all patient needs from daily health to specialized veterinary care.</p>
+            </div>
+
+            <!-- Interactive Category Tabs -->
+            <div class="category-tabs" id="catalog-tabs">
+                <button class="tab-btn active" onclick="filterCategory('all', this)"><i class="fa-solid fa-grid-2"></i> All Categories</button>
+                <button class="tab-btn" onclick="filterCategory('allopathic', this)"><i class="fa-solid fa-capsules"></i> Allopathic Rx</button>
+                <button class="tab-btn" onclick="filterCategory('pediatric', this)"><i class="fa-solid fa-baby"></i> Pediatric & Baby</button>
+                <button class="tab-btn" onclick="filterCategory('ayurvedic', this)"><i class="fa-solid fa-leaf"></i> Ayurvedic & Herbal</button>
+                <button class="tab-btn" onclick="filterCategory('veterinary', this)"><i class="fa-solid fa-paw"></i> Veterinary Care</button>
+                <button class="tab-btn" onclick="filterCategory('surgical', this)"><i class="fa-solid fa-kit-medical"></i> Surgical & Diagnostic</button>
+            </div>
+
+            <div class="services-grid">
+                <!-- Allopathic -->
+                <div class="service-card" data-category="allopathic">
+                    <div class="card-badge">Daily & Chronic</div>
+                    <div class="service-icon-box teal">
+                        <i class="fa-solid fa-capsules"></i>
+                    </div>
+                    <h3>Adult & Prescription Medicine</h3>
+                    <p>Comprehensive inventory of doctor-prescribed pharmaceuticals, antibiotics, diabetes care, cardiovascular, hypertension, and pain management medications.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Cardiac & Blood Pressure Care</li>
+                        <li><i class="fa-solid fa-check"></i> Diabetes & Insulin Management</li>
+                        <li><i class="fa-solid fa-check"></i> Pain Relief, Antibiotics & Antacids</li>
+                        <li><i class="fa-solid fa-check"></i> Multivitamins & Mineral Supplements</li>
+                    </ul>
+                    <button class="card-action-btn" onclick="fillMedicineInquiry('Prescription Allopathic Medicine')">
+                        <span>Inquire Availability</span> <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Children / Pediatric -->
+                <div class="service-card" data-category="pediatric">
+                    <div class="card-badge">Gentle & Safe</div>
+                    <div class="service-icon-box blue">
+                        <i class="fa-solid fa-baby"></i>
+                    </div>
+                    <h3>Children & Pediatric Care</h3>
+                    <p>Specially formulated syrups, infant drops, fever suspensions, baby skin care, digestive aids, and pediatric nutritional supplements from top brands.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Pediatric Fever & Cold Drops</li>
+                        <li><i class="fa-solid fa-check"></i> Baby Nutrition & Growth Formulas</li>
+                        <li><i class="fa-solid fa-check"></i> Diaper Rash & Baby Skincare</li>
+                        <li><i class="fa-solid fa-check"></i> Immunity & Oral Rehydration</li>
+                    </ul>
+                    <button class="card-action-btn" onclick="fillMedicineInquiry('Pediatric Baby Healthcare')">
+                        <span>Inquire Availability</span> <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Animal / Veterinary -->
+                <div class="service-card" data-category="veterinary">
+                    <div class="card-badge">Livestock & Pets</div>
+                    <div class="service-icon-box green">
+                        <i class="fa-solid fa-paw"></i>
+                    </div>
+                    <h3>Veterinary & Animal Medicine</h3>
+                    <p>Complete veterinary solutions for farmers and pet owners in Sangola: cattle feed supplements, calcium tonics, dewormers, wound sprays, and pet healthcare.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Cattle & Livestock Mineral Mix</li>
+                        <li><i class="fa-solid fa-check"></i> High Potency Liquid Calcium</li>
+                        <li><i class="fa-solid fa-check"></i> Animal Dewormers & Antibiotics</li>
+                        <li><i class="fa-solid fa-check"></i> Pet Grooming & Domestic Animal Care</li>
+                    </ul>
+                    <button class="card-action-btn" onclick="fillMedicineInquiry('Veterinary Animal Medicine')">
+                        <span>Inquire Availability</span> <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Ayurvedic & Natural -->
+                <div class="service-card" data-category="ayurvedic">
+                    <div class="card-badge">Natural Wellness</div>
+                    <div class="service-icon-box emerald">
+                        <i class="fa-solid fa-mortar-pestle"></i>
+                    </div>
+                    <h3>Ayurvedic & Herbal Wellness</h3>
+                    <p>Authentic classical and proprietary Ayurvedic formulations from trusted brands like Dabur, Baidyanath, Himalaya, Patanjali, and Charak.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Chyawanprash & Immunity Tonics</li>
+                        <li><i class="fa-solid fa-check"></i> Joint Pain Oils & Herbal Balms</li>
+                        <li><i class="fa-solid fa-check"></i> Digestive Syrups & Herbal Teas</li>
+                        <li><i class="fa-solid fa-check"></i> Pure Ashwagandha, Giloy & Triphala</li>
+                    </ul>
+                    <button class="card-action-btn" onclick="fillMedicineInquiry('Ayurvedic Medicine')">
+                        <span>Inquire Availability</span> <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Surgical & Diagnostic -->
+                <div class="service-card" data-category="surgical">
+                    <div class="card-badge">Equipment & First Aid</div>
+                    <div class="service-icon-box purple">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3>Surgical & Diagnostic Devices</h3>
+                    <p>Clinical diagnostic equipment, home health monitoring kits, orthopedic braces, wound dressing materials, and surgical consumables.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Digital BP Monitors & Glucometers</li>
+                        <li><i class="fa-solid fa-check"></i> Pulse Oximeters & Thermometers</li>
+                        <li><i class="fa-solid fa-check"></i> Orthopedic Belts, Crepe Bandages</li>
+                        <li><i class="fa-solid fa-check"></i> Sterile Gauze, Syringes & Antiseptics</li>
+                    </ul>
+                    <button class="card-action-btn" onclick="fillMedicineInquiry('Surgical Diagnostic Device')">
+                        <span>Inquire Availability</span> <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Cosmetics & Personal Care -->
+                <div class="service-card" data-category="allopathic">
+                    <div class="card-badge">Daily Care</div>
+                    <div class="service-icon-box orange">
+                        <i class="fa-solid fa-pump-soap"></i>
+                    </div>
+                    <h3>Cosmetics & Personal Hygiene</h3>
+                    <p>Dermatologist-recommended skin creams, sunscreens, medicated shampoos, oral care products, sanitizers, and daily wellness essentials.</p>
+                    <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> Medicated Skincare & Antifungal</li>
+                        <li><i class="fa-solid fa-check"></i> Antidandruff & Haircare Solutions</li>
+                        <li><i class="fa-solid fa-check"></i> Sun protection & Hydration</li>
+                        <li><i class="fa-solid fa-check"></i> Feminine Hygiene & Sanitization</li>
+                    </ul>
+                    <button class="card-action-btn" onclick="fillMedicineInquiry('Cosmetics Personal Care')">
+                        <span>Inquire Availability</span> <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI PHARMACIST SPOTLIGHT SECTION -->
+    <section class="ai-banner-section">
+        <div class="ai-banner-container">
+            <div class="ai-banner-card">
+                <div class="ai-banner-grid">
+                    <div class="ai-banner-text">
+                        <div class="ai-pill"><i class="fa-solid fa-brain"></i> Powered by Gemini AI</div>
+                        <h2>Meet Your 24×7 AI Medical Pharmacist</h2>
+                        <p>Got a question about a medicine, dosage, store timings, or Sangola location? Our intelligent digital assistant is available around the clock to give you immediate answers.</p>
+                        
+                        <div class="ai-capabilities">
+                            <div class="ai-cap-item">
+                                <i class="fa-solid fa-capsules"></i>
+                                <span>Explain medicine uses and common precautions</span>
+                            </div>
+                            <div class="ai-cap-item">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>Check 24x7 store timings and Sangola location</span>
+                            </div>
+                            <div class="ai-cap-item">
+                                <i class="fa-solid fa-truck-fast"></i>
+                                <span>Inquire about home delivery and ordering steps</span>
+                            </div>
+                            <div class="ai-cap-item">
+                                <i class="fa-solid fa-heart-circle-bolt"></i>
+                                <span>Provide BMI analysis and general health tips</span>
+                            </div>
+                        </div>
+
+                        <div class="ai-prompt-chips">
+                            <span class="chip-label">Quick Prompts:</span>
+                            <button class="ai-chip" onclick="askAiQuick('What are the store timings and address of Jankalyan Medical?')">📍 Store Timings & Address</button>
+                            <button class="ai-chip" onclick="askAiQuick('Do you have home delivery in Sangola?')">🚚 Home Delivery Info</button>
+                            <button class="ai-chip" onclick="askAiQuick('What is Paracetamol used for and what are precautions?')">💊 Medicine Guidance</button>
+                            <button class="ai-chip" onclick="askAiQuick('Who is the owner and developer of this medical shop app?')">👨‍⚕️ Store Owner & Info</button>
+                        </div>
+
+                        <button class="btn-primary ai-launch-btn" onclick="openChatbot()">
+                            <i class="fa-solid fa-robot"></i>
+                            <span>Launch AI Assistant Now</span>
+                        </button>
+                    </div>
+
+                    <div class="ai-banner-visual">
+                        <div class="ai-chat-preview-card">
+                            <div class="preview-header">
+                                <div class="preview-avatar"><i class="fa-solid fa-robot"></i></div>
+                                <div>
+                                    <strong>Jankalyan AI Assistant</strong>
+                                    <small>🟢 Online • Instant Response</small>
+                                </div>
+                            </div>
+                            <div class="preview-bubble bot">
+                                <span>Namaste! I am Jankalyan Medical's AI Assistant. How can I help you today with your medicines or store inquiries?</span>
+                            </div>
+                            <div class="preview-bubble user">
+                                <span>Is Jankalyan Medical open right now?</span>
+                            </div>
+                            <div class="preview-bubble bot">
+                                <span>Yes! Jankalyan Medical is open <strong>24x7 hrs every single day</strong> near Wadhegaon Naka, Sangola. Walk in anytime or message us on WhatsApp!</span>
+                            </div>
+                            <div class="preview-input-bar">
+                                <span>Type your healthcare question...</span>
+                                <button onclick="openChatbot()"><i class="fa-solid fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEDICINE AVAILABILITY & QUICK WHATSAPP ORDER -->
+    <section class="availability-section" id="availability">
+        <div class="section-container">
+            <div class="availability-grid">
+                
+                <!-- Left: Info & Guidelines -->
+                <div class="avail-info-col">
+                    <span class="section-tag"><i class="fa-solid fa-whatsapp"></i> Express WhatsApp Service</span>
+                    <h2 class="section-title">Check Medicine Stock & Order Online</h2>
+                    <p>Have a doctor's prescription or looking for a specific tablet, syrup, veterinary supplement, or baby formula? Submit your request below or send a photo of your prescription directly to our WhatsApp hotline.</p>
+
+                    <div class="order-perks">
+                        <div class="perk-card">
+                            <div class="perk-icon"><i class="fa-solid fa-bolt"></i></div>
+                            <div>
+                                <h4>Instant Response</h4>
+                                <p>Our pharmacist confirms stock availability within minutes.</p>
+                            </div>
+                        </div>
+
+                        <div class="perk-card">
+                            <div class="perk-icon"><i class="fa-solid fa-camera"></i></div>
+                            <div>
+                                <h4>Prescription Photo Accepted</h4>
+                                <p>You can also send your prescription photo directly on WhatsApp.</p>
+                            </div>
+                        </div>
+
+                        <div class="perk-card">
+                            <div class="perk-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                            <div>
+                                <h4>Free Home Delivery</h4>
+                                <p>Available for Sangola town with safe packaging.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="direct-phone-box">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <div>
+                            <span>Prefer Calling Directly?</span>
+                            <a href="tel:+918669118742">+91 86691 18742</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Form -->
+                <div class="avail-form-col">
+                    <div class="form-card">
+                        <div class="form-header">
+                            <div class="form-header-icon"><i class="fa-solid fa-file-medical"></i></div>
+                            <div>
+                                <h3>Customer Medicine Inquiry & Order</h3>
+                                <p>Syncs to Online Supabase Database & Prepares WhatsApp Order</p>
+                            </div>
+                        </div>
+
+                        <form id="medForm">
+                            <!-- Section 1: Customer Information -->
+                            <div class="form-section-divider">
+                                <span class="section-divider-title"><i class="fa-solid fa-id-card-clip"></i> 1. Customer Information</span>
+                                <span class="section-divider-badge"><i class="fa-solid fa-bolt"></i> ID & Date Auto-Generated</span>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group flex-2">
+                                    <label for="custName"><i class="fa-solid fa-user"></i> Full Name <span class="required-star">*</span></label>
+                                    <input type="text" id="custName" placeholder="e.g. Ramesh Baburao Patil" required>
+                                </div>
+                                <div class="form-group flex-1">
+                                    <label for="custAge"><i class="fa-solid fa-cake-candles"></i> Age</label>
+                                    <input type="number" id="custAge" min="1" max="120" placeholder="e.g. 45">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group flex-1">
+                                    <label for="custPhone"><i class="fa-solid fa-phone"></i> Mobile Number <span class="required-star">*</span></label>
+                                    <input type="tel" id="custPhone" placeholder="10-digit mobile number" required>
+                                </div>
+                                <div class="form-group flex-1">
+                                    <label for="custGender"><i class="fa-solid fa-venus-mars"></i> Gender</label>
+                                    <select id="custGender">
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Other">Other / Not Disclosed</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group flex-1">
+                                    <label for="custAddress"><i class="fa-solid fa-house"></i> Address (House / Street)</label>
+                                    <input type="text" id="custAddress" placeholder="e.g. Near Wadhegaon Naka, House No. 24">
+                                </div>
+                                <div class="form-group flex-1">
+                                    <label for="custAreaVillage"><i class="fa-solid fa-location-dot"></i> Area / Village</label>
+                                    <input type="text" id="custAreaVillage" placeholder="e.g. Sangola Town / Wadhegaon / Nazar Camp">
+                                </div>
+                            </div>
+
+                            <!-- Section 2: Medicine Requirement (Multiple Tablets, Syrups, etc.) -->
+                            <div class="form-section-divider" style="margin-top: 14px;">
+                                <span class="section-divider-title"><i class="fa-solid fa-prescription-bottle-medical"></i> 2. Medicine Requirement</span>
+                                <span class="section-divider-badge" id="publicMedCountBadge"><i class="fa-solid fa-pills"></i> 1 Item</span>
+                            </div>
+
+                            <!-- Dynamic Medicines Container for Public Form -->
+                            <div id="publicMedicinesList" class="dynamic-meds-container">
+                                <!-- Populated dynamically via JS -->
+                            </div>
+
+                            <!-- Add Medicine Action Bar with Icons -->
+                            <div class="add-medicine-actions-bar">
+                                <button type="button" class="btn-add-medicine-item" onclick="addPublicMedicineRow()" id="btnAddPublicMedicine" title="Add another medicine item">
+                                    <i class="fa-solid fa-circle-plus"></i>
+                                    <span>Add Another Medicine (Tablet / Syrup)</span>
+                                </button>
+                                <div class="quick-add-pills">
+                                    <span class="quick-add-label">Quick Add:</span>
+                                    <button type="button" class="btn-quick-add-type" onclick="addPublicMedicineRow({ type: 'Tablet' })" title="Add a Tablet">
+                                        <i class="fa-solid fa-tablets"></i> + Tablet
+                                    </button>
+                                    <button type="button" class="btn-quick-add-type" onclick="addPublicMedicineRow({ type: 'Syrup / Liquid' })" title="Add a Syrup">
+                                        <i class="fa-solid fa-bottle-droplet"></i> + Syrup
+                                    </button>
+                                    <button type="button" class="btn-quick-add-type" onclick="addPublicMedicineRow({ type: 'Capsule' })" title="Add a Capsule">
+                                        <i class="fa-solid fa-capsules"></i> + Capsule
+                                    </button>
+                                    <button type="button" class="btn-quick-add-type" onclick="addPublicMedicineRow({ type: 'Pediatric Drops' })" title="Add Drops">
+                                        <i class="fa-solid fa-droplet"></i> + Drops
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Hidden inputs for fallback -->
+                            <input type="hidden" id="medName" value="">
+                            <input type="hidden" id="medStrength" value="">
+                            <input type="hidden" id="medType" value="Tablet">
+
+                            <div class="form-row" style="margin-top: 12px;">
+                                <div class="form-group flex-1">
+                                    <label for="medPrescription"><i class="fa-solid fa-file-prescription"></i> Prescription Available</label>
+                                    <select id="medPrescription">
+                                        <option value="Yes">Yes (I have Doctor's Prescription)</option>
+                                        <option value="No">No (OTC / Regular Medicine Inquiry)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group flex-1">
+                                    <label for="custDoctor"><i class="fa-solid fa-user-doctor"></i> Preferred / Consulting Doctor</label>
+                                    <input type="text" id="custDoctor" placeholder="e.g. Dr. S. K. Kulkarni / Dr. Patil Hospital / Self">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message"><i class="fa-solid fa-notes-medical"></i> Additional Requirement / Dosage Notes</label>
+                                <textarea id="message" rows="2" placeholder="Specific brand preferences, quantity (strips/bottles), or urgency requirements..."></textarea>
+                            </div>
+
+                            <div class="cloud-sync-badge">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                <span>Connected to Supabase Backend (<code>dasjhsvfipsadrykdojv.supabase.co</code>) &bull; Auto-saves records upon submission.</span>
+                            </div>
+
+                            <button type="submit" id="submitOrderBtn" class="btn-whatsapp-submit">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span>Save to Supabase & Dispatch on WhatsApp</span>
+                            </button>
+                            <p class="form-disclaimer"><i class="fa-solid fa-lock"></i> Verified 24×7 by Jankalyan Pharmacist Mr. Siddhu Hajare (<strong>+91 86691 18742</strong>)</p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CLINICAL BMI CALCULATOR & HEALTH METRIC -->
+    <section class="bmi-section" id="bmi">
+        <div class="section-container">
+            <div class="bmi-grid">
+                
+                <div class="bmi-calc-card">
+                    <div class="bmi-card-header">
+                        <span class="section-tag"><i class="fa-solid fa-heart-circle-check"></i> Health Wellness Tool</span>
+                        <h2>Body Mass Index (BMI) Calculator</h2>
+                        <p>Calculate your BMI score according to World Health Organization (WHO) medical guidelines to understand your physical health status.</p>
+                    </div>
+
+                    <div class="bmi-input-grid">
+                        <div class="bmi-input-group">
+                            <label for="weight"><i class="fa-solid fa-weight-scale"></i> Weight (kg)</label>
+                            <div class="input-with-unit">
+                                <input type="number" id="weight" placeholder="e.g. 68" min="10" max="300" step="0.5">
+                                <span class="unit-badge">kg</span>
+                            </div>
+                        </div>
+
+                        <div class="bmi-input-group">
+                            <label for="height"><i class="fa-solid fa-ruler-vertical"></i> Height (cm)</label>
+                            <div class="input-with-unit">
+                                <input type="number" id="height" placeholder="e.g. 172" min="50" max="250" step="1">
+                                <span class="unit-badge">cm</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bmi-actions">
+                        <button class="btn-primary" onclick="calculateBMI()">
+                            <i class="fa-solid fa-calculator"></i>
+                            <span>Calculate BMI Score</span>
+                        </button>
+                        <button class="btn-outline-sm" onclick="resetBMI()">
+                            <i class="fa-solid fa-rotate-left"></i>
+                            <span>Reset</span>
+                        </button>
+                    </div>
+
+                    <!-- Interactive Result Container -->
+                    <div id="bmi-result-card" class="bmi-result-box" style="display: none;">
+                        <div class="result-header">
+                            <div>
+                                <span class="result-label">Your BMI Score:</span>
+                                <h3 id="result-score" class="result-score">22.4</h3>
+                            </div>
+                            <div id="result-status-pill" class="status-pill normal">
+                                <span id="result-category">Normal Weight</span>
+                            </div>
+                        </div>
+
+                        <!-- Visual Meter Gauge -->
+                        <div class="bmi-meter">
+                            <div class="meter-bar">
+                                <div class="meter-segment under" title="Underweight (< 18.5)"></div>
+                                <div class="meter-segment normal" title="Normal (18.5 - 24.9)"></div>
+                                <div class="meter-segment over" title="Overweight (25.0 - 29.9)"></div>
+                                <div class="meter-segment obese" title="Obese (≥ 30)"></div>
+                            </div>
+                            <div id="meter-marker" class="meter-marker" style="left: 35%;"></div>
+                        </div>
+                        <div class="meter-labels">
+                            <span>Underweight (&lt;18.5)</span>
+                            <span>Normal (18.5-24.9)</span>
+                            <span>Overweight (25-29.9)</span>
+                            <span>Obese (&ge;30)</span>
+                        </div>
+
+                        <div class="result-details" id="result-details">
+                            <p id="result-advice">Your body weight is within the healthy medical range. Keep up balanced nutrition and regular physical activity!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BMI Reference Guide -->
+                <div class="bmi-guide-card">
+                    <h3><i class="fa-solid fa-notes-medical"></i> Understanding Your BMI</h3>
+                    <p>Body Mass Index is a screening tool used by healthcare practitioners to estimate body fat for adult men and women.</p>
+
+                    <div class="guide-table">
+                        <div class="guide-row under">
+                            <span class="guide-range">&lt; 18.5</span>
+                            <span class="guide-label">Underweight</span>
+                            <span class="guide-desc">May require nutritional supplements</span>
+                        </div>
+                        <div class="guide-row normal">
+                            <span class="guide-range">18.5 – 24.9</span>
+                            <span class="guide-label">Normal / Healthy</span>
+                            <span class="guide-desc">Optimal healthy weight range</span>
+                        </div>
+                        <div class="guide-row over">
+                            <span class="guide-range">25.0 – 29.9</span>
+                            <span class="guide-label">Overweight</span>
+                            <span class="guide-desc">Cardiovascular & fitness attention advised</span>
+                        </div>
+                        <div class="guide-row obese">
+                            <span class="guide-range">&ge; 30.0</span>
+                            <span class="guide-label">Obese</span>
+                            <span class="guide-desc">Consult a doctor for metabolic care</span>
+                        </div>
+                    </div>
+
+                    <div class="pharmacy-health-tip">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <div>
+                            <strong>Need Vitamins or Diet Supplements?</strong>
+                            <p>Ask our certified pharmacist at Jankalyan Medical for daily multivitamins, protein powders, and wellness care.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- STORE PHOTO GALLERY -->
+    <section class="gallery-section" id="gallery">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-camera"></i> Authentic Store Photos</span>
+                <h2 class="section-title">Jankalyan Medical Gallery</h2>
+                <p class="section-subtitle">Take a look inside our clean, well-organized pharmacy store equipped with modern refrigeration and extensive medicine stock in Sangola.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="https://i.ibb.co/8LhnVpcj/IMG-20260623-WA0045.jpg" alt="Jankalyan Medical Medicine Storage Racks Sangola" loading="lazy">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>Allopathic & Prescription Counter</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="https://i.ibb.co/JWVJMDT7/IMG-20260623-WA0056.jpg" alt="Jankalyan Medical Store Dispensary" loading="lazy">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>Dispensary & Pharmacist Desk</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="https://i.ibb.co/6JB8yLK2/IMG-20260623-WA0063.jpg" alt="Jankalyan Medical Store Front View" loading="lazy">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>Organized Inventory & Supplies</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="https://i.ibb.co/jv2PdcJc/IMG-20260623-WA0060.jpg" alt="Jankalyan Medical Customer Service Area" loading="lazy">
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>Customer Service Counter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US / TRUST SECTION -->
+    <section class="why-us-section" id="trust">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-award"></i> Quality & Commitment</span>
+                <h2 class="section-title">Why Families in Sangola Trust Jankalyan Medical</h2>
+                <p class="section-subtitle">Dedicated to providing reliable pharmaceutical care with transparency, integrity, and round-the-clock availability.</p>
+            </div>
+
+            <div class="trust-grid">
+                <div class="why-card">
+                    <div class="why-icon-box"><i class="fa-solid fa-certificate"></i></div>
+                    <h3>100% Genuine & Certified</h3>
+                    <p>Every single strip, vial, and syrup is procured strictly from licensed pharmaceutical distributors and leading manufacturers.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon-box"><i class="fa-solid fa-snowflake"></i></div>
+                    <h3>Cold Chain Temperature Control</h3>
+                    <p>Dedicated medical refrigeration maintains optimal temperature for insulins, vaccines, pediatric drops, and sensitive serums.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon-box"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                    <h3>24×7 Emergency Support</h3>
+                    <p>Never worry about late-night medical emergencies. Our pharmacy is open 24 hours every single day for the Sangola community.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon-box"><i class="fa-solid fa-robot"></i></div>
+                    <h3>AI-Powered Healthcare Guide</h3>
+                    <p>Our smart Gemini AI assistant helps you learn medicine uses, precautions, and store details from anywhere at any time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOVE FOOTER ADMIN LOGIN TRIGGER -->
+    <div class="above-footer-admin-strip" id="aboveFooterAdminStrip">
+        <div class="section-container above-footer-inner">
+            <button type="button" class="btn-above-footer-admin" onclick="openAdminModal()" id="aboveFooterAdminBtn" title="Admin" aria-label="Admin">
+                <i class="fa-solid fa-user-shield"></i>
+                <span>Admin</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- FOOTER / CONTACT & MAPS SECTION -->
+    <footer class="site-footer" id="contact">
+        <div class="footer-top">
+            <div class="footer-container">
+                
+                <!-- Col 1: Store Intro -->
+                <div class="footer-col brand-col">
+                    <div class="footer-logo">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                        <span>Jankalyan Medical</span>
+                    </div>
+                    <p class="footer-desc">Sangola's trusted 24×7 medical store offering genuine allopathic, ayurvedic, pediatric, and veterinary medicines with compassionate care and express delivery.</p>
+                    
+                    <div class="owner-pill">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <span>Proprietor: <strong>Mr. Siddhu Hajare</strong></span>
+                    </div>
+
+                    <div class="footer-socials">
+                        <a href="https://instagram.com/jankalyan_medical_sangola_42" target="_blank" rel="noopener noreferrer" class="social-btn instagram" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/918669118742" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="https://maps.app.goo.gl/nrZZWinitTmpLWyh8" target="_blank" rel="noopener noreferrer" class="social-btn maps" aria-label="Google Maps">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="footer-col">
+                    <h4>Quick Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+                        <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Medicine Catalog</a></li>
+                        <li><a href="#availability"><i class="fa-solid fa-angle-right"></i> Check Availability & Order</a></li>
+                        <li><a href="#bmi"><i class="fa-solid fa-angle-right"></i> BMI Health Calculator</a></li>
+                        <li><a href="#gallery"><i class="fa-solid fa-angle-right"></i> Store Photos</a></li>
+                        <li><a href="#trust"><i class="fa-solid fa-angle-right"></i> Why Trust Us</a></li>
+                        <li class="footer-admin-link-li">
+                            <a href="javascript:void(0)" onclick="openAdminModal()" class="footer-admin-link-btn" title="Admin">
+                                <i class="fa-solid fa-user-shield"></i>
+                                <span>Admin</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Contact & Hours -->
+                <div class="footer-col">
+                    <h4>Contact & Hours</h4>
+                    <div class="footer-contact-list">
+                        <div class="f-contact-item">
+                            <i class="fa-solid fa-clock"></i>
+                            <div>
+                                <strong>Operating Hours:</strong>
+                                <p>Open 24 Hours / 7 Days a Week</p>
+                            </div>
+                        </div>
+                        <div class="f-contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <strong>Call Hotline:</strong>
+                                <p><a href="tel:+918669118742">+91 86691 18742</a></p>
+                            </div>
+                        </div>
+                        <div class="f-contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <strong>Email Inquiries:</strong>
+                                <p><a href="mailto:janaklyanmedicalstore@gmail.com">janaklyanmedicalstore@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col 4: Location & Map -->
+                <div class="footer-col">
+                    <h4>Store Location</h4>
+                    <div class="f-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong>Physical Address:</strong>
+                            <p>Near Wadhegaon Naka, Sangola, Dist. Solapur, Maharashtra - 413307</p>
+                        </div>
+                    </div>
+                    <a href="https://maps.app.goo.gl/nrZZWinitTmpLWyh8" target="_blank" rel="noopener noreferrer" class="map-action-btn">
+                        <i class="fa-solid fa-diamond-turn-right"></i>
+                        <span>Get Directions on Google Maps</span>
+                    </a>
+
+                    <!-- Developer info -->
+                    <div class="dev-card">
+                        <div class="dev-header">
+                            <i class="fa-solid fa-code"></i>
+                            <div>
+                                <small>Designed & Developed by</small>
+                                <strong>Rahul Sargar</strong>
+                            </div>
+                        </div>
+                        <div class="dev-links">
+                            <a href="mailto:sargarrahul428@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+                            <a href="https://instagram.com/rahul_sargar_08" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> @rahul_sargar_08</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-container bottom-flex">
+                <div class="footer-bottom-left">
+                    <p>&copy; 2026 <strong>Jankalyan Medical, Sangola</strong>. All Rights Reserved.</p>
+                    <p class="med-disclaimer">Disclaimer: Information provided by AI is for educational reference. Always consult a qualified medical doctor or registered pharmacist for clinical diagnosis.</p>
+                </div>
+                <div class="footer-bottom-right">
+                    <button type="button" class="btn-footer-admin-badge" onclick="openAdminModal()" id="footerAdminPortalBtn" title="Admin" aria-label="Admin">
+                        <i class="fa-solid fa-user-shield"></i>
+                        <span>Admin</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING AI ASSISTANT ROBOT TRIGGER -->
+    <div id="ai-btn" class="floating-ai-trigger" onclick="toggleChatbot()" title="Open AI Pharmacist Assistant">
+        <div class="ai-trigger-icon">
+            <i class="fa-solid fa-robot"></i>
+        </div>
+        <span class="ai-trigger-label">Ask AI</span>
+        <span class="online-indicator"></span>
+    </div>
+
+    <!-- CHATBOT BACKDROP FOR MOBILE & DESKTOP -->
+    <div class="chat-backdrop" id="chat-backdrop" onclick="closeChatbot()"></div>
+
+    <!-- MODERN AI PHARMACIST MODAL -->
+    <div class="chatbot-container" id="chatbot">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="chat-avatar"><i class="fa-solid fa-robot"></i></div>
+                <div>
+                    <h4>Jankalyan AI Assistant</h4>
+                    <span class="chat-online-tag"><span class="pulse-dot-sm"></span> Online • 24x7 Support</span>
+                </div>
+            </div>
+            <div class="chat-header-actions">
+                <button class="chat-action-icon" onclick="clearChatHistory()" title="Clear Chat"><i class="fa-solid fa-rotate-left"></i></button>
+                <button class="chat-action-icon" id="close-chat" onclick="closeChatbot()" title="Close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+
+        <div class="chat-quick-bar">
+            <button onclick="askAiQuick('What are the store timings and location?')">⏰ Timings & Location</button>
+            <button onclick="askAiQuick('How can I order medicines for home delivery?')">📦 Home Delivery</button>
+            <button onclick="askAiQuick('Who is the store owner and developer?')">ℹ️ Store Info</button>
+        </div>
+
+        <div class="chat-body" id="chat-body">
+            <div class="chat-msg bot">
+                <div class="msg-avatar"><i class="fa-solid fa-robot"></i></div>
+                <div class="msg-content">
+                    <p>Namaste! I am <strong>Jankalyan Medical's AI Assistant</strong> in Sangola.</p>
+                    <p>I can help you with:</p>
+                    <ul>
+                        <li>💊 Medicine uses & precautions</li>
+                        <li>⏰ 24x7 Store timings & address</li>
+                        <li>🚚 Home delivery & order guidance</li>
+                        <li>📏 Health guidance & wellness tips</li>
+                    </ul>
+                    <p>How can I assist you right now?</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-footer">
+            <form id="chatForm" onsubmit="event.preventDefault(); sendMessage();" class="chat-form-inner">
+                <input
+                    type="text"
+                    id="chat-input"
+                    placeholder="Ask about medicines, timings, delivery..."
+                    autocomplete="off"
+                >
+                <button type="submit" id="chat-send-btn" aria-label="Send message">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MOBILE BOTTOM APP NAVIGATION BAR (<= 768px) -->
+    <nav class="mobile-bottom-bar" id="mobile-bottom-bar" aria-label="Mobile Bottom Navigation">
+        <a href="#home" class="bottom-nav-item active" id="bnav-home">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="#services" class="bottom-nav-item" id="bnav-services">
+            <i class="fa-solid fa-pills"></i>
+            <span>Medicines</span>
+        </a>
+        <button class="bottom-nav-center-btn" onclick="openChatbot()" aria-label="Open AI Pharmacist Assistant">
+            <div class="bottom-ai-spark">
+                <i class="fa-solid fa-robot"></i>
+            </div>
+            <span>Ask AI</span>
+        </button>
+        <a href="#availability" class="bottom-nav-item" id="bnav-order">
+            <i class="fa-solid fa-truck-medical"></i>
+            <span>Order</span>
+        </a>
+        <a href="tel:+918669118742" class="bottom-nav-item" id="bnav-call">
+            <i class="fa-solid fa-phone"></i>
+            <span>Call</span>
+        </a>
+    </nav>
+
+    <!-- ==========================================================================
+         ADMIN AUTHENTICATION & ALL BOOKINGS MANAGEMENT PORTAL MODALS
+         ========================================================================== -->
+
+    <!-- 1. ADMIN AUTHENTICATION MODAL (SIGN IN & SINGLE-SLOT REGISTRATION) -->
+    <div class="admin-modal-backdrop" id="admin-login-backdrop" onclick="closeAdminModal()"></div>
+    <div class="admin-login-modal" id="admin-login-modal" role="dialog" aria-labelledby="adminLoginTitle" aria-hidden="true">
+        <div class="admin-login-card">
+            <button class="modal-close-btn" onclick="closeAdminModal()" aria-label="Close Admin Modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <div class="admin-login-header">
+                <div class="admin-shield-icon">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <div class="admin-badge-tag" id="adminHeaderBadgeTag"><i class="fa-solid fa-lock"></i> Pharmacist Authentication</div>
+                <h3 id="adminLoginTitle">Admin Portal Access</h3>
+                <p id="adminLoginSubtitle">View and manage customer medicine records & orders.</p>
+            </div>
+
+            <!-- Single Slot Status Banner -->
+            <div class="admin-slot-banner" id="adminSlotBanner">
+                <div class="slot-banner-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <div class="slot-banner-text" id="adminSlotBannerText">
+                    <strong>1 Single Administrator Slot Available</strong>
+                    <span>Register your permanent admin account. Once registered, no other admin accounts can ever be created.</span>
+                </div>
+            </div>
+
+            <!-- Auth Mode Switcher Tabs -->
+            <div class="auth-tabs-row" id="authTabsRow">
+                <button type="button" class="auth-tab-btn active" id="tabBtnSignIn" onclick="switchAuthTab('login')">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    <span>Admin Sign In</span>
+                </button>
+                <button type="button" class="auth-tab-btn" id="tabBtnRegister" onclick="switchAuthTab('register')">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <span>Create Admin Account</span>
+                    <span class="tab-badge-sm" id="tabRegisterBadge">1 Slot</span>
+                </button>
+            </div>
+
+            <div id="loginAlertBox" class="login-alert-box" style="display: none;"></div>
+
+            <!-- A. SIGN IN FORM -->
+            <form id="adminLoginForm" onsubmit="event.preventDefault(); handleAdminLogin();" autocomplete="off">
+                <div class="form-group">
+                    <label for="adminUsername"><i class="fa-solid fa-user-lock"></i> Administrator ID / Email / Phone</label>
+                    <input type="text" id="adminUsername" placeholder="Enter your registered admin username or email" required autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                </div>
+
+                <div class="form-group">
+                    <label for="adminPassword"><i class="fa-solid fa-key"></i> Administrator Password</label>
+                    <div class="password-input-wrap">
+                        <input type="password" id="adminPassword" placeholder="Enter your administrator password" required autocomplete="new-password">
+                        <button type="button" class="btn-toggle-pwd" onclick="togglePasswordVisibility('adminPassword', 'pwdToggleIcon')" aria-label="Toggle password visibility">
+                            <i class="fa-solid fa-eye" id="pwdToggleIcon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="login-options-row">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="rememberAdmin" checked>
+                        <span>Keep me logged in on this browser</span>
+                    </label>
+                </div>
+
+                <button type="submit" id="adminLoginSubmitBtn" class="btn-primary btn-full-width">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    <span>Sign In to Customer Medicine Records Portal</span>
+                </button>
+            </form>
+
+            <!-- B. SINGLE-SLOT REGISTRATION FORM (Only active before 1st admin registration) -->
+            <form id="adminRegisterForm" onsubmit="event.preventDefault(); handleAdminRegister();" autocomplete="off" style="display: none;">
+                <div class="single-slot-notice">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <span><strong>Permanent Single-Slot Policy:</strong> This portal allows exactly 1 administrator account. After registration, account creation is locked forever.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="regAdminName"><i class="fa-solid fa-user-doctor"></i> Administrator Full Name <span class="required-star">*</span></label>
+                    <input type="text" id="regAdminName" placeholder="e.g. Siddhu Hajare (Sangola Admin)" required autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="regAdminUsername"><i class="fa-solid fa-envelope"></i> Admin Username / Email ID <span class="required-star">*</span></label>
+                    <input type="text" id="regAdminUsername" placeholder="e.g. admin@jankalyan.com or janaklyanmedicalstore@gmail.com" required autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="regAdminPhone"><i class="fa-solid fa-phone"></i> Mobile Number (WhatsApp Hotline) <span class="required-star">*</span></label>
+                    <input type="tel" id="regAdminPhone" placeholder="e.g. 8669118742" required autocomplete="off">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group flex-1">
+                        <label for="regAdminPassword"><i class="fa-solid fa-lock"></i> Set Password <span class="required-star">*</span></label>
+                        <div class="password-input-wrap">
+                            <input type="password" id="regAdminPassword" placeholder="Min 5 characters" required minlength="5" autocomplete="new-password">
+                            <button type="button" class="btn-toggle-pwd" onclick="togglePasswordVisibility('regAdminPassword', 'regPwdToggleIcon1')" aria-label="Toggle">
+                                <i class="fa-solid fa-eye" id="regPwdToggleIcon1"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-group flex-1">
+                        <label for="regAdminConfirmPassword"><i class="fa-solid fa-check-double"></i> Confirm Password <span class="required-star">*</span></label>
+                        <div class="password-input-wrap">
+                            <input type="password" id="regAdminConfirmPassword" placeholder="Confirm password" required minlength="5" autocomplete="new-password">
+                            <button type="button" class="btn-toggle-pwd" onclick="togglePasswordVisibility('regAdminConfirmPassword', 'regPwdToggleIcon2')" aria-label="Toggle">
+                                <i class="fa-solid fa-eye" id="regPwdToggleIcon2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="regAdminPin"><i class="fa-solid fa-key"></i> Security Recovery PIN (4-6 Digits)</label>
+                    <input type="password" id="regAdminPin" placeholder="e.g. 413307 (Used for password recovery)" maxlength="8" autocomplete="off">
+                </div>
+
+                <button type="submit" id="adminRegisterSubmitBtn" class="btn-primary btn-full-width" style="background: #059669;">
+                    <i class="fa-solid fa-user-shield"></i>
+                    <span>Create & Lock Single Admin Account</span>
+                </button>
+            </form>
+
+            <div class="login-card-footer">
+                <span><i class="fa-solid fa-shield-halved"></i> Jankalyan Medical Sangola &bull; Single-Slot Master Admin Security</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. ADMIN ALL BOOKINGS & CUSTOMER MANAGEMENT DASHBOARD PORTAL (FULLSCREEN) -->
+    <div class="admin-portal-modal" id="admin-portal-modal" role="dialog" aria-labelledby="portalTitle" aria-hidden="true">
+        <div class="portal-wrapper">
+            <!-- Portal Header -->
+            <header class="portal-header">
+                <div class="portal-header-left">
+                    <div class="portal-logo-icon">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                    </div>
+                    <div>
+                        <div class="portal-brand-tag">JANKALYAN MEDICAL SANGOLA &bull; 24×7 MASTER CONTROL</div>
+                        <h2 id="portalTitle" class="portal-title">Customer Medicine Record</h2>
+                        <span class="portal-tagline" style="font-size: 0.76rem; color: #64748b; display: block; margin-top: 1px;">
+                            <i class="fa-solid fa-circle-check" style="color: #10b981;"></i> Real-time viewer for customer medicine records, prescription uploads & patient registries.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="portal-header-right">
+                    <div class="db-status-pill" id="portalDbStatusBadge" onclick="openSupabaseSchemaModal()" title="Click to view Supabase Cloud Database details">
+                        <span class="pulse-dot-sm"></span>
+                        <span id="portalDbStatusText">Checking Database...</span>
+                        <i class="fa-solid fa-circle-info"></i>
+                    </div>
+
+                    <div class="admin-user-pill" onclick="openAdminProfileModal()" title="Click to view Admin Profile & Security Details">
+                        <i class="fa-solid fa-user-doctor"></i>
+                        <span id="portalAdminUserName">Pharmacist Admin</span>
+                        <span class="slot-badge-micro">1/1 Slot</span>
+                    </div>
+
+                    <button class="btn-portal-outline" onclick="openAdminProfileModal()" title="View Administrator Account Profile & Security Settings">
+                        <i class="fa-solid fa-user-gear"></i>
+                        <span>Admin Profile</span>
+                    </button>
+
+                    <button class="btn-portal-outline" onclick="openSupabaseSchemaModal()" title="View Supabase Table Schema & Setup Guide">
+                        <i class="fa-solid fa-database"></i>
+                        <span>Supabase SQL</span>
+                    </button>
+
+                    <button class="btn-portal-outline" onclick="handleAdminLogout()" title="Logout of Admin Portal">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <span>Logout</span>
+                    </button>
+
+                    <button class="portal-close-icon-btn" onclick="closeAdminPortal()" aria-label="Close Portal">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Portal Subheader Navigation Tabs -->
+            <div class="portal-nav-bar" id="portalNavBar">
+                <div class="portal-tabs-group" role="tablist" aria-label="Admin Portal Sections">
+                    <button type="button" class="portal-nav-tab active" id="tabCustomerRecordsBtn" role="tab" aria-selected="true" aria-controls="sectionCustomerRecords" onclick="switchAdminPortalSection('customers')">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Customer Medicine Record</span>
+                        <span class="portal-tab-badge" id="tabCustomerCount">0</span>
+                    </button>
+                    <button type="button" class="portal-nav-tab" id="tabStockManagementBtn" role="tab" aria-selected="false" aria-controls="sectionStockManagement" onclick="switchAdminPortalSection('stock')">
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                        <span>Medicine Stock Management</span>
+                        <span class="portal-tab-badge badge-stock" id="tabStockCount">0</span>
+                    </button>
+                </div>
+                <div class="portal-tab-extra">
+                    <span class="portal-active-section-tag" id="portalCurrentSectionTag">
+                        <i class="fa-solid fa-store"></i> Sangola Store Counter &bull; Active
+                    </span>
+                </div>
+            </div>
+
+            <!-- Portal Body Content -->
+            <div class="portal-body">
+                
+                <!-- ======================================================== -->
+                <!-- SECTION 1: CUSTOMER MEDICINE RECORDS (PATIENT FILES)      -->
+                <!-- ======================================================== -->
+                <div id="sectionCustomerRecords" class="portal-section active">
+                    
+                    <!-- Customer Hub Hero Header -->
+                    <div class="stock-hub-header customer-hub-header">
+                        <div class="stock-hub-left">
+                            <div class="stock-hub-badge" style="background: #eef2ff; color: #4338ca; border-color: #c7d2fe;">
+                                <span class="pulse-dot" style="background: #4f46e5;"></span>
+                                <i class="fa-solid fa-address-book"></i>
+                                <span>Sangola Pharmacy Patient Registry</span>
+                                <span class="stock-sync-indicator" title="Connected to Supabase cloud database"><i class="fa-solid fa-cloud-check"></i> Supabase Live</span>
+                            </div>
+                            <h2 class="stock-hub-title">Customer Medical Records &amp; Patient Registry</h2>
+                            <p class="stock-hub-desc">Live counter dispensing files, multi-medicine requirements, WhatsApp prescription dispatch, and doctor consultation records.</p>
+                        </div>
+                        <div class="stock-hub-actions">
+                            <button class="btn-stock-hero-primary" onclick="openAddCustomerModal()" style="background: #2563eb;">
+                                <i class="fa-solid fa-user-plus"></i>
+                                <span>+ Add Customer Record</span>
+                            </button>
+                            <button class="btn-stock-hero-secondary" onclick="loadCustomerRecords(true)" title="Force sync with Supabase cloud database">
+                                <i class="fa-solid fa-arrows-rotate" id="refreshIcon"></i>
+                                <span>Sync Cloud</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Smart Urgent Alert Ribbon (Visible when active pending prescriptions exist) -->
+                    <div id="customerSmartAlertBanner" class="stock-smart-alert" style="display: none; background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); border-left: 4px solid #2563eb;">
+                        <div class="alert-icon-side" style="color: #2563eb;"><i class="fa-solid fa-bell"></i></div>
+                        <div class="alert-message-side" id="customerSmartAlertMessage">
+                            <strong>Patient Refills Pending:</strong> Some customer medicine records are awaiting review or dispensing.
+                        </div>
+                        <div class="alert-actions-side">
+                            <button type="button" class="btn-alert-action" onclick="filterByStatus('Active')" style="background: #2563eb;">Review Active Files</button>
+                            <button type="button" class="btn-alert-dismiss" onclick="dismissCustomerAlert()" aria-label="Dismiss alert"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Customer KPI Analytics Summary (Clickable Filter Cards) -->
+                    <div class="portal-kpi-grid">
+                        <div class="kpi-card total-kpi stock-kpi-clickable active" id="kpiCardCustAll" onclick="filterByStatus('All')" title="Click to view all patient records">
+                            <div class="kpi-icon-wrap" style="background: #eef2ff; color: #4f46e5;"><i class="fa-solid fa-receipt"></i></div>
+                            <div class="kpi-content">
+                                <div class="kpi-tag-row">
+                                    <span class="kpi-label">Total Patient Records</span>
+                                    <span class="kpi-filter-tag"><i class="fa-solid fa-filter"></i> All</span>
+                                </div>
+                                <h3 class="kpi-value" id="kpiTotalCustomers">0</h3>
+                                <small class="kpi-sub">All patient files &amp; medicine orders</small>
+                            </div>
+                        </div>
+
+                        <div class="kpi-card pending-kpi stock-kpi-clickable" id="kpiCardCustActive" onclick="filterByStatus('Active')" title="Click to filter active/new patient files">
+                            <div class="kpi-icon-wrap" style="background: #f0fdf4; color: #16a34a;"><i class="fa-solid fa-clock"></i></div>
+                            <div class="kpi-content">
+                                <div class="kpi-tag-row">
+                                    <span class="kpi-label">Active / New Orders</span>
+                                    <span class="kpi-filter-tag safe"><i class="fa-solid fa-bolt"></i> New</span>
+                                </div>
+                                <h3 class="kpi-value" id="kpiPendingCount" style="color: #16a34a;">0</h3>
+                                <small class="kpi-sub">Ready for dispensing at counter</small>
+                            </div>
+                        </div>
+
+                        <div class="kpi-card processing-kpi stock-kpi-clickable" id="kpiCardCustReview" onclick="filterByStatus('Under Review')" title="Click to filter files under prescription review">
+                            <div class="kpi-icon-wrap" style="background: #fff7ed; color: #ea580c;"><i class="fa-solid fa-file-medical"></i></div>
+                            <div class="kpi-content">
+                                <div class="kpi-tag-row">
+                                    <span class="kpi-label">Under Rx Review</span>
+                                    <span class="kpi-filter-tag warn"><i class="fa-solid fa-user-doctor"></i> Checking</span>
+                                </div>
+                                <h3 class="kpi-value" id="kpiProcessingCount" style="color: #ea580c;">0</h3>
+                                <small class="kpi-sub">Doctor prescription verification</small>
+                            </div>
+                        </div>
+
+                        <div class="kpi-card dispensed-kpi stock-kpi-clickable" id="kpiCardCustVerified" onclick="filterByStatus('Verified')" title="Click to filter completed/dispensed records">
+                            <div class="kpi-icon-wrap" style="background: #eff6ff; color: #2563eb;"><i class="fa-solid fa-circle-check"></i></div>
+                            <div class="kpi-content">
+                                <div class="kpi-tag-row">
+                                    <span class="kpi-label">Dispensed / Completed</span>
+                                    <span class="kpi-filter-tag" style="background: #dbeafe; color: #1d4ed8;"><i class="fa-solid fa-check-double"></i> Done</span>
+                                </div>
+                                <h3 class="kpi-value" id="kpiDispensedCount" style="color: #2563eb;">0</h3>
+                                <small class="kpi-sub">Successfully dispensed patients</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Toolbar -->
+                    <div class="portal-toolbar stock-toolbar">
+                        <!-- Top Toolbar Controls: Search, Sort & View Mode Switcher -->
+                        <div class="stock-search-sort-row">
+                            <div class="toolbar-search-wrap stock-search-box">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input type="text" id="portalSearchInput" placeholder="Search customer records by name, phone, medicine, doctor, area..." oninput="handleCustomerSearch()">
+                                <button class="search-clear-btn" id="searchClearBtn" onclick="clearCustomerSearch()" style="display: none;">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </div>
+
+                            <div class="stock-sort-wrap">
+                                <label for="customerSortSelect" class="stock-sort-label"><i class="fa-solid fa-arrow-down-short-wide"></i> Sort:</label>
+                                <select id="customerSortSelect" class="stock-filter-dropdown" onchange="handleCustomerSort(this.value)">
+                                    <option value="newest">📅 Date: Newest First</option>
+                                    <option value="oldest">📅 Date: Oldest First</option>
+                                    <option value="name_asc">👤 Patient Name (A - Z)</option>
+                                    <option value="name_desc">👤 Patient Name (Z - A)</option>
+                                    <option value="meds_count">💊 Medicines: Most Items First</option>
+                                </select>
+                            </div>
+
+                            <!-- View Mode Toggle: Modern Cards Grid vs Detailed Table -->
+                            <div class="stock-view-toggle-group">
+                                <button type="button" class="view-toggle-btn active" id="btnCustViewGrid" onclick="setCustomerViewMode('grid')" title="Switch to Visual Patient Cards View">
+                                    <i class="fa-solid fa-grip"></i>
+                                    <span>Patient Cards</span>
+                                </button>
+                                <button type="button" class="view-toggle-btn" id="btnCustViewTable" onclick="setCustomerViewMode('table')" title="Switch to Detailed Clinical Table View">
+                                    <i class="fa-solid fa-table-list"></i>
+                                    <span>Data Table</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Secondary Filters: Status Pills & Action Buttons -->
+                        <div class="stock-filter-controls-row">
+                            <div class="status-filter-pills" id="statusFilterPills">
+                                <button class="filter-pill active" onclick="filterByStatus('All')">All Records (<span id="countAll">0</span>)</button>
+                                <button class="filter-pill" onclick="filterByStatus('Active')">🟢 Active / New (<span id="countPending">0</span>)</button>
+                                <button class="filter-pill" onclick="filterByStatus('Under Review')">🟡 Under Review (<span id="countProcessing">0</span>)</button>
+                                <button class="filter-pill" onclick="filterByStatus('Verified')">🔵 Dispensed (<span id="countDispensed">0</span>)</button>
+                            </div>
+
+                            <div class="toolbar-actions stock-secondary-actions">
+                                <button class="btn-primary btn-add-customer" onclick="openAddCustomerModal()" style="height: 38px; padding: 0 14px;">
+                                    <i class="fa-solid fa-user-plus"></i>
+                                    <span>+ Add Patient</span>
+                                </button>
+                                <button class="btn-portal-secondary" onclick="exportCustomersCSV()" title="Export customer medicine records to CSV">
+                                    <i class="fa-solid fa-file-csv"></i>
+                                    <span>CSV</span>
+                                </button>
+                                <button class="btn-portal-secondary" onclick="printCustomersReport()" title="Print formatted customer prescription report">
+                                    <i class="fa-solid fa-print"></i>
+                                    <span>Print</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Customer Records Main Container -->
+                    <div class="portal-table-container stock-main-container">
+                        <div id="portalLoadingSpinner" class="portal-loading-state" style="display: none;">
+                            <div class="spinner-medical"></div>
+                            <p>Synchronizing customer medicine records with Supabase database...</p>
+                        </div>
+
+                        <div id="portalEmptyState" class="portal-empty-state" style="display: none;">
+                            <div class="empty-icon"><i class="fa-solid fa-clipboard-question"></i></div>
+                            <h4>No customer records found</h4>
+                            <p>No customer medicine records match your current search or filter criteria.</p>
+                            <button class="btn-primary" onclick="openAddCustomerModal()"><i class="fa-solid fa-user-plus"></i> + Add New Customer Record</button>
+                        </div>
+
+                        <!-- 1. Visual Patient Cards Grid View -->
+                        <div id="customerGridWrapper" class="customer-cards-grid" style="display: grid;">
+                            <!-- Populated dynamically via script.js -->
+                        </div>
+
+                        <!-- 2. Detailed Clinical Table View -->
+                        <div class="table-responsive" id="customerTableWrapper" style="display: none;">
+                            <table class="clinical-table" id="customerTable">
+                                <thead>
+                                    <tr>
+                                        <th>Record ID &amp; Date</th>
+                                        <th>Customer Information</th>
+                                        <th>Contact &amp; WhatsApp</th>
+                                        <th>Address / Village</th>
+                                        <th>Medicine Requirement</th>
+                                        <th>Doctor &amp; Prescription</th>
+                                        <th>Record Status</th>
+                                        <th class="text-right">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="customerTableBody">
+                                    <!-- Populated dynamically by script.js -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Portal Footer Info Bar -->
+                    <div class="portal-info-footer">
+                        <div class="p-info-left">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span><strong>Master Admin Database:</strong> Connected to Supabase <code>dasjhsvfipsadrykdojv.supabase.co</code>. Storing all customer information &amp; medicine requirements securely.</span>
+                        </div>
+                        <div class="p-info-right">
+                            <button class="btn-text-action" onclick="resetSampleCustomers()"><i class="fa-solid fa-rotate-left"></i> Reset Demo Records</button>
+                        </div>
+                    </div>
+
+                </div> <!-- End #sectionCustomerRecords -->
+
+                <!-- ======================================================== -->
+                <!-- SECTION 2: MEDICINE STOCK & INVENTORY MANAGEMENT           -->
+                <!-- ======================================================== -->
+                <div id="sectionStockManagement" class="portal-section" style="display: none;">
+                    
+                    <!-- Stock Hub Hero Header -->
+                    <div class="stock-hub-header">
+                        <div class="stock-hub-left">
+                            <div class="stock-hub-badge">
+                                <span class="pulse-dot"></span>
+                                <i class="fa-solid fa-boxes-stacked"></i>
+                                <span>Sangola Pharmacy Inventory Hub</span>
+                                <span class="stock-sync-indicator" title="Connected to Supabase cloud database"><i class="fa-solid fa-cloud-check"></i> Supabase Live</span>
+                            </div>
+                            <h2 class="stock-hub-title">Medicine Stock &amp; Shelf Inventory</h2>
+                            <p class="stock-hub-desc">Live counter dispensing, batch tracking, expiry monitoring, and 1-click quantity adjustments.</p>
+                        </div>
+                        <div class="stock-hub-actions">
+                            <button class="btn-stock-hero-primary" onclick="openAddStockModal()">
+                                <i class="fa-solid fa-plus"></i>
+                                <span>+ Add Medicine Stock</span>
+                            </button>
+                            <button class="btn-stock-hero-secondary" onclick="loadStockRecords(true)" title="Force sync with Supabase cloud database">
+                                <i class="fa-solid fa-arrows-rotate" id="stockRefreshIcon"></i>
+                                <span>Sync Cloud</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Smart Urgent Alert Ribbon (Visible when out-of-stock or expiring items exist) -->
+                    <div id="stockSmartAlertBanner" class="stock-smart-alert" style="display: none;">
+                        <div class="alert-icon-side"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                        <div class="alert-message-side" id="stockSmartAlertMessage">
+                            <strong>Inventory Alert:</strong> Some medicines require immediate procurement or expiry attention.
+                        </div>
+                        <div class="alert-actions-side">
+                            <button type="button" class="btn-alert-action" onclick="filterStockByStatus('low_stock')">Review Reorder List</button>
+                            <button type="button" class="btn-alert-dismiss" onclick="dismissStockAlert()" aria-label="Dismiss alert"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Stock KPI Analytics Summary (Clickable Filter Cards) -->
+                    <div class="portal-kpi-grid stock-kpi-grid">
+                        <div class="kpi-card total-kpi stock-kpi-clickable active" id="kpiCardAll" onclick="filterStockByStatus('All')" title="Click to view all medicine stock">
+                            <div class="kpi-icon-wrap" style="background: #ecfdf5; color: #059669;"><i class="fa-solid fa-boxes-stacked"></i></div>
+                            <div class="kpi-content">
+                                <div class="kpi-tag-row">
+                                    <span class="kpi-label">Total Medicines</span>
+                                    <span class="kpi-filter-tag"><i class="fa-solid fa-filter"></i> All</span>
+                                </div>
+                                <h3 class="kpi-value" id="kpiStockTotalItems">0</h3>
+                                <small class="kpi-sub" id="kpiStockValuation">₹0 Valuation &bull; 0 Units</small>
+                            </div>
+                        </div>
+
+                        <div class="kpi-card ok-kpi stock-kpi-clickable" id="kpiCardAdequate" onclick="filterStockByStatus('in_stock')" title="Click to filter medicines with safe stock">
+                            <div class="kpi-icon-wrap" style="background: #f0fdf4; color: #16a34a;"><i class="fa-solid fa-circle-check"></i></div>
+                            <div class="kpi-content">
+                                <div class="kpi-tag-row">
+                                    <span class="kpi-label">Adequate Stock</span>
+                                    <span class="kpi-filter-tag safe"><i class="fa-solid fa-shield-halved"></i> Safe</span>
+                                </div>
+                                <h3 class="kpi-value" id="kpiStockAdequateCount" style="color: #16a34a;">0</h3>
+                                <small class="kpi-sub">Above reorder safety threshold</small>
+                            </div>
+                        </div>
+
+                        <div class="kpi-card warning-kpi stock-kpi-clickable" id="kpiCardLow" onclick="filterStockByStatus('low_stock')" title="Click to filter medicines running low">
+                            <div class="kpi-icon-wrap" style="background: #fff7ed; color: #ea580c;"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                            <div class="kpi-content">
+                                <div class="kpi-tag-row">
+                                    <span class="kpi-label">Low Stock Reorder</span>
+                                    <span class="kpi-filter-tag warn"><i class="fa-solid fa-arrow-trend-down"></i> Reorder</span>
+                                </div>
+                                <h3 class="kpi-value" id="kpiStockLowCount" style="color: #ea580c;">0</h3>
+                                <small class="kpi-sub">Below minimum shelf threshold</small>
+                            </div>
+                        </div>
+
+                        <div class="kpi-card pending-kpi stock-kpi-clickable" id="kpiCardOut" onclick="filterStockByStatus('out_of_stock')" title="Click to filter out-of-stock medicines">
+                            <div class="kpi-icon-wrap" style="background: #fef2f2; color: #dc2626;"><i class="fa-solid fa-circle-xmark"></i></div>
+                            <div class="kpi-content">
+                                <div class="kpi-tag-row">
+                                    <span class="kpi-label">Out of Stock (0 Qty)</span>
+                                    <span class="kpi-filter-tag danger"><i class="fa-solid fa-circle-exclamation"></i> Urgent</span>
+                                </div>
+                                <h3 class="kpi-value" id="kpiStockOutCount" style="color: #dc2626;">0</h3>
+                                <small class="kpi-sub">Immediate supplier order required</small>
+                            </div>
+                        </div>
+
+                        <div class="kpi-card expiring-kpi stock-kpi-clickable" id="kpiCardExpiring" onclick="filterStockByStatus('expiring_soon')" title="Click to filter batches expiring within 90 days">
+                            <div class="kpi-icon-wrap" style="background: #fef3c7; color: #d97706;"><i class="fa-solid fa-hourglass-half"></i></div>
+                            <div class="kpi-content">
+                                <div class="kpi-tag-row">
+                                    <span class="kpi-label">Expiring Soon (&lt; 90d)</span>
+                                    <span class="kpi-filter-tag amber"><i class="fa-solid fa-clock"></i> Expiring</span>
+                                </div>
+                                <h3 class="kpi-value" id="kpiStockExpiringCount" style="color: #d97706;">0</h3>
+                                <small class="kpi-sub">Return or dispense before expiry</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stock Action Toolbar -->
+                    <div class="portal-toolbar stock-toolbar">
+                        <!-- Top Toolbar Controls: Search, Sort & View Mode Switcher -->
+                        <div class="stock-search-sort-row">
+                            <div class="toolbar-search-wrap stock-search-box">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input type="text" id="stockSearchInput" placeholder="Search medicine, salt formula, company, batch #, shelf rack..." oninput="handleStockSearch()">
+                                <button class="search-clear-btn" id="stockSearchClearBtn" onclick="clearStockSearch()" style="display: none;">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </div>
+
+                            <div class="stock-sort-wrap">
+                                <label for="stockSortSelect" class="stock-sort-label"><i class="fa-solid fa-arrow-down-short-wide"></i> Sort:</label>
+                                <select id="stockSortSelect" class="stock-filter-dropdown" onchange="handleStockSort(this.value)">
+                                    <option value="name_asc">Medicine Name (A - Z)</option>
+                                    <option value="name_desc">Medicine Name (Z - A)</option>
+                                    <option value="qty_asc">⚠️ Stock: Low to High (Urgent First)</option>
+                                    <option value="qty_desc">📦 Stock: High to Low</option>
+                                    <option value="expiry_asc">⏳ Expiry: Earliest First</option>
+                                    <option value="mrp_desc">₹ MRP: High to Low</option>
+                                    <option value="margin_desc">📈 Profit Margin: Highest First</option>
+                                </select>
+                            </div>
+
+                            <!-- View Mode Toggle: Modern Cards Grid vs Detailed Table -->
+                            <div class="stock-view-toggle-group">
+                                <button type="button" class="view-toggle-btn active" id="btnViewGrid" onclick="setStockViewMode('grid')" title="Switch to Easy Visual Card Grid View">
+                                    <i class="fa-solid fa-grip"></i>
+                                    <span>Cards Grid</span>
+                                </button>
+                                <button type="button" class="view-toggle-btn" id="btnViewTable" onclick="setStockViewMode('table')" title="Switch to Detailed Table View">
+                                    <i class="fa-solid fa-table-list"></i>
+                                    <span>Data Table</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Secondary Filters: Status Pills, Category Dropdown & Quick Actions -->
+                        <div class="stock-filter-controls-row">
+                            <div class="status-filter-pills" id="stockStatusFilterPills">
+                                <button class="filter-pill active" onclick="filterStockByStatus('All')">All (<span id="stockCountAll">0</span>)</button>
+                                <button class="filter-pill" onclick="filterStockByStatus('in_stock')">🟢 Adequate (<span id="stockCountAdequate">0</span>)</button>
+                                <button class="filter-pill" onclick="filterStockByStatus('low_stock')">🟠 Low (<span id="stockCountLow">0</span>)</button>
+                                <button class="filter-pill" onclick="filterStockByStatus('out_of_stock')">🔴 Out (<span id="stockCountOut">0</span>)</button>
+                                <button class="filter-pill" onclick="filterStockByStatus('expiring_soon')">⏳ Expiring (<span id="stockCountExpiring">0</span>)</button>
+                            </div>
+
+                            <div class="stock-category-select-wrap">
+                                <select id="stockCategoryFilter" class="stock-filter-dropdown" onchange="filterStockByCategory(this.value)">
+                                    <option value="All">All Categories (सर्व प्रकार)</option>
+                                    <option value="Tablet">Tablet (गोळ्या)</option>
+                                    <option value="Capsule">Capsule (कॅप्सूल)</option>
+                                    <option value="Syrup / Liquid">Syrup / Liquid (सिरप)</option>
+                                    <option value="Injection / Vial">Injection / Vial (इंजेक्शन)</option>
+                                    <option value="Pediatric Drops / Food">Pediatric Drops / Food (बाल औषधे)</option>
+                                    <option value="Ointment / Cream">Ointment / Cream (मलहम)</option>
+                                    <option value="Surgical / Devices">Surgical / Devices (सर्जिकल)</option>
+                                    <option value="Ayurvedic / Herbal">Ayurvedic / Herbal (आयुर्वेदिक)</option>
+                                    <option value="Veterinary">Veterinary (पशुवैद्यकीय)</option>
+                                </select>
+                            </div>
+
+                            <div class="toolbar-actions stock-secondary-actions">
+                                <button class="btn-portal-secondary" onclick="exportStockCSV()" title="Export medicine inventory to CSV spreadsheet">
+                                    <i class="fa-solid fa-file-csv"></i>
+                                    <span>CSV</span>
+                                </button>
+                                <button class="btn-portal-secondary" onclick="printStockReport()" title="Print pharmacy inventory stock report">
+                                    <i class="fa-solid fa-print"></i>
+                                    <span>Print</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stock Main Container -->
+                    <div class="portal-table-container stock-main-container">
+                        <div id="stockLoadingSpinner" class="portal-loading-state" style="display: none;">
+                            <div class="spinner-medical"></div>
+                            <p>Synchronizing medicine stock inventory with Supabase database...</p>
+                        </div>
+
+                        <div id="stockEmptyState" class="portal-empty-state" style="display: none;">
+                            <div class="empty-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                            <h4>No medicine stock records found</h4>
+                            <p>No inventory matches your active filter or search keywords.</p>
+                            <button class="btn-primary" onclick="openAddStockModal()" style="background: #059669;">
+                                <i class="fa-solid fa-plus"></i> + Add First Medicine to Stock
+                            </button>
+                        </div>
+
+                        <!-- 1. EASY ATTRACTIVE CARD GRID VIEW (Default) -->
+                        <div id="stockGridWrapper" class="stock-cards-grid">
+                            <!-- Populated dynamically by script.js -->
+                        </div>
+
+                        <!-- 2. DETAILED CLINICAL TABLE VIEW (Toggleable) -->
+                        <div class="table-responsive" id="stockTableWrapper" style="display: none;">
+                            <table class="clinical-table stock-table" id="stockTable">
+                                <thead>
+                                    <tr>
+                                        <th>Medicine &amp; Composition<br><small style="color: #64748b; font-weight: 500;">(औषध नाव व घटक/फॉर्म्युला)</small></th>
+                                        <th>Category &amp; Mfr<br><small style="color: #64748b; font-weight: 500;">(प्रकार व कंपनी)</small></th>
+                                        <th>Batch No. &amp; Expiry<br><small style="color: #64748b; font-weight: 500;">(बॅच क्र. व मुदत)</small></th>
+                                        <th>In-Stock Quantity<br><small style="color: #059669; font-weight: 600;">(शिल्लक संख्या व युनिट)</small></th>
+                                        <th>Min Level<br><small style="color: #ea580c; font-weight: 500;">(किमान मर्यादा)</small></th>
+                                        <th>Pricing &amp; Margin<br><small style="color: #64748b; font-weight: 500;">(खरेदी | MRP | विक्री)</small></th>
+                                        <th>Rack / Shelf<br><small style="color: #64748b; font-weight: 500;">(कपाट / रॅक)</small></th>
+                                        <th>Stock Health<br><small style="color: #64748b; font-weight: 500;">(स्थिती)</small></th>
+                                        <th class="text-right">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="stockTableBody">
+                                    <!-- Populated dynamically by script.js -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Stock Footer Info Bar -->
+                    <div class="portal-info-footer">
+                        <div class="p-info-left">
+                            <i class="fa-solid fa-database" style="color: #059669;"></i>
+                            <span><strong>Cloud Storage:</strong> Supabase table <code>medicine_stock</code> (Live inventory, batch tracking, reorder thresholds &amp; expiry alarms).</span>
+                        </div>
+                        <div class="p-info-right">
+                            <button class="btn-text-action" onclick="openSupabaseSchemaModal('stock')"><i class="fa-solid fa-code"></i> View Supabase SQL</button>
+                            <span style="color: #cbd5e1; margin: 0 8px;">|</span>
+                            <button class="btn-text-action" onclick="resetSampleStock()"><i class="fa-solid fa-rotate-left"></i> Reset Demo Stock</button>
+                        </div>
+                    </div>
+                </div> <!-- End #sectionStockManagement -->
+        </div>
+    </div>
+
+    <!-- 3. ADD / EDIT BOOKING & CUSTOMER RECORD MODAL -->
+    <div class="admin-modal-backdrop" id="customer-crud-backdrop" onclick="closeCustomerCrudModal()"></div>
+    <div class="admin-crud-modal" id="customer-crud-modal" role="dialog" aria-labelledby="crudModalTitle" aria-hidden="true">
+        <div class="admin-crud-card" style="max-width: 780px;">
+            <div class="crud-header" style="background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);">
+                <div class="crud-header-icon" style="background: rgba(255,255,255,0.15); color: #ffffff;">
+                    <i class="fa-solid fa-address-card"></i>
+                </div>
+                <div>
+                    <h3 id="crudModalTitle" style="color: #ffffff;">Add Patient / Customer Record</h3>
+                    <p style="color: #bfdbfe;">Save patient prescription file, multi-medicine dispensing requirements, and doctor notes.</p>
+                </div>
+                <button class="modal-close-btn" onclick="closeCustomerCrudModal()" aria-label="Close" style="color: #ffffff;">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- 1-Click Clinical Patient Profile Presets -->
+            <div class="customer-presets-banner" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px; margin-bottom: 16px;">
+                <div style="font-size: 0.82rem; font-weight: 700; color: #1e293b; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between;">
+                    <span><i class="fa-solid fa-wand-magic-sparkles" style="color: #4f46e5;"></i> Quick-Fill Sample Patient Profiles:</span>
+                    <span style="font-size: 0.74rem; color: #64748b; font-weight: 500;">Click any preset to auto-fill form</span>
+                </div>
+                <div class="quick-preset-chips-wrap" style="display: flex; gap: 8px; flex-wrap: wrap;">
+                    <button type="button" class="btn-customer-preset-chip" onclick="applyCustomerPreset('rahul')" title="Auto-fill Rahul Sargar (Cardiac BP & Cough Profile)">
+                        <i class="fa-solid fa-user-check"></i> Rahul Sargar (BP &amp; Cough)
+                    </button>
+                    <button type="button" class="btn-customer-preset-chip" onclick="applyCustomerPreset('sunita')" title="Auto-fill Sunita Patil (Diabetic & Antacid Care)">
+                        <i class="fa-solid fa-user-check"></i> Sunita Patil (Diabetic Care)
+                    </button>
+                    <button type="button" class="btn-customer-preset-chip" onclick="applyCustomerPreset('aarav')" title="Auto-fill Aarav Kadam (Pediatric Drops & Fever)">
+                        <i class="fa-solid fa-child"></i> Aarav Kadam (Pediatric)
+                    </button>
+                    <button type="button" class="btn-customer-preset-chip" onclick="applyCustomerPreset('anand')" title="Auto-fill Anand Shinde (Antibiotic & Allergy)">
+                        <i class="fa-solid fa-user-check"></i> Anand Shinde (Antibiotic)
+                    </button>
+                </div>
+            </div>
+
+            <form id="customerCrudForm" onsubmit="event.preventDefault(); saveCustomerRecord();">
+                <input type="hidden" id="crudCustomerId" value="">
+
+                <!-- Section 1: Customer Demographics -->
+                <div class="form-section-title">
+                    <i class="fa-solid fa-id-card-clip"></i>
+                    <span>1. Patient Demographics &amp; Contact</span>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group flex-2">
+                        <label for="crudFullName"><i class="fa-solid fa-user"></i> Full Patient Name <span class="required-star">*</span></label>
+                        <input type="text" id="crudFullName" placeholder="e.g. Rahul Sargar / Ramesh Patil" required>
+                    </div>
+                    <div class="form-group flex-1">
+                        <label for="crudAge"><i class="fa-solid fa-cake-candles"></i> Age (Years)</label>
+                        <input type="number" id="crudAge" min="1" max="120" placeholder="e.g. 26">
+                    </div>
+                    <div class="form-group flex-1">
+                        <label for="crudGender"><i class="fa-solid fa-venus-mars"></i> Gender</label>
+                        <select id="crudGender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group flex-1">
+                        <label for="crudMobile"><i class="fa-solid fa-phone"></i> Mobile / WhatsApp <span class="required-star">*</span></label>
+                        <input type="tel" id="crudMobile" placeholder="e.g. 7709647627" required>
+                    </div>
+                    <div class="form-group flex-1">
+                        <label for="crudStatus"><i class="fa-solid fa-signal"></i> Record Status</label>
+                        <select id="crudStatus">
+                            <option value="Active">🟢 Active / New Record</option>
+                            <option value="Under Review">🟡 Under Review / Checking Rx</option>
+                            <option value="Verified">🔵 Dispensed / Completed</option>
+                            <option value="Archived">⚪ Archived / Inactive</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group flex-1">
+                        <label for="crudAddress"><i class="fa-solid fa-house"></i> Street / House Address</label>
+                        <input type="text" id="crudAddress" placeholder="e.g. Near Wadhegaon Naka, Sangola">
+                    </div>
+                    <div class="form-group flex-1">
+                        <label for="crudAreaVillage"><i class="fa-solid fa-location-dot"></i> Area / Village / Town</label>
+                        <input type="text" id="crudAreaVillage" placeholder="e.g. Sangola Town (413307)">
+                    </div>
+                </div>
+
+                <!-- Section 2: Medicine Requirement -->
+                <div class="form-section-title" style="margin-top: 16px;">
+                    <i class="fa-solid fa-prescription-bottle-medical"></i>
+                    <span>2. Medicine Prescriptions &amp; Dispensing List</span>
+                    <span class="section-divider-badge" id="crudMedCountBadge" style="margin-left: auto;"><i class="fa-solid fa-pills"></i> 1 Item</span>
+                </div>
+
+                <!-- 1-Click Stock Medicine Fast Chips -->
+                <div class="stock-medicine-chips-panel" style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 10px 12px; margin-bottom: 12px;">
+                    <div style="font-size: 0.8rem; font-weight: 700; color: #166534; margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
+                        <i class="fa-solid fa-bolt" style="color: #16a34a;"></i>
+                        <span>1-Click Add Top Pharmacy Stock Medicines:</span>
+                    </div>
+                    <div class="fast-med-chips-list" style="display: flex; gap: 6px; flex-wrap: wrap;">
+                        <button type="button" class="btn-fast-stock-chip" onclick="addCustomerMedFromStock('Dolo 650', 'Tablet', '650mg', '1 Strip (15 Tabs)')">+ Dolo 650</button>
+                        <button type="button" class="btn-fast-stock-chip" onclick="addCustomerMedFromStock('Telmakind 40', 'Tablet', '40mg', '1 Strip (10 Tabs)')">+ Telmakind 40</button>
+                        <button type="button" class="btn-fast-stock-chip" onclick="addCustomerMedFromStock('Pan-D Capsule', 'Capsule', '40mg/30mg', '1 Strip (15 Caps)')">+ Pan-D</button>
+                        <button type="button" class="btn-fast-stock-chip" onclick="addCustomerMedFromStock('Shelcal 500', 'Tablet', '500mg', '1 Strip (15 Tabs)')">+ Shelcal 500</button>
+                        <button type="button" class="btn-fast-stock-chip" onclick="addCustomerMedFromStock('Augmentin 625 Duo', 'Tablet', '625mg', '1 Strip (10 Tabs)')">+ Augmentin 625</button>
+                        <button type="button" class="btn-fast-stock-chip" onclick="addCustomerMedFromStock('Ascoril D Plus Cough Syrup', 'Syrup / Liquid', '100ml', '1 Bottle')">+ Ascoril Syrup</button>
+                        <button type="button" class="btn-fast-stock-chip" onclick="addCustomerMedFromStock('Azithral 500', 'Tablet', '500mg', '1 Strip (5 Tabs)')">+ Azithral 500</button>
+                        <button type="button" class="btn-fast-stock-chip" onclick="addCustomerMedFromStock('Cetzine 10', 'Tablet', '10mg', '1 Strip (10 Tabs)')">+ Cetzine 10</button>
+                        <button type="button" class="btn-fast-stock-chip" onclick="addCustomerMedFromStock('Electral ORS Powder', 'Surgical / Devices', '21.8g Sachet', '2 Sachets')">+ Electral ORS</button>
+                    </div>
+                </div>
+
+                <!-- Dynamic Medicines Container for Admin -->
+                <div id="crudMedicinesList" class="dynamic-meds-container">
+                    <!-- Populated dynamically via JS -->
+                </div>
+
+                <!-- Add Medicine Action Bar with Category Icons -->
+                <div class="add-medicine-actions-bar">
+                    <button type="button" class="btn-add-medicine-item" onclick="addCrudMedicineRow()" id="btnAddCrudMedicine" title="Add another medicine item">
+                        <i class="fa-solid fa-circle-plus"></i>
+                        <span>Add Custom Medicine</span>
+                    </button>
+                    <div class="quick-add-pills">
+                        <span class="quick-add-label">Add Type:</span>
+                        <button type="button" class="btn-quick-add-type" onclick="addCrudMedicineRow({ type: 'Tablet' })" title="Add a Tablet">
+                            <i class="fa-solid fa-tablets"></i> + Tablet
+                        </button>
+                        <button type="button" class="btn-quick-add-type" onclick="addCrudMedicineRow({ type: 'Syrup / Liquid' })" title="Add a Syrup">
+                            <i class="fa-solid fa-bottle-droplet"></i> + Syrup
+                        </button>
+                        <button type="button" class="btn-quick-add-type" onclick="addCrudMedicineRow({ type: 'Capsule' })" title="Add a Capsule">
+                            <i class="fa-solid fa-capsules"></i> + Capsule
+                        </button>
+                        <button type="button" class="btn-quick-add-type" onclick="addCrudMedicineRow({ type: 'Pediatric Drops' })" title="Add Drops">
+                            <i class="fa-solid fa-droplet"></i> + Drops
+                        </button>
+                        <button type="button" class="btn-quick-add-type" onclick="addCrudMedicineRow({ type: 'Injection / Insulin' })" title="Add Injection">
+                            <i class="fa-solid fa-syringe"></i> + Injection
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Hidden inputs for backward compatibility -->
+                <input type="hidden" id="crudMedicineName" value="">
+                <input type="hidden" id="crudMedicineStrength" value="">
+                <input type="hidden" id="crudMedicineType" value="Tablet">
+
+                <!-- Section 3: Doctor & Notes -->
+                <div class="form-section-title" style="margin-top: 16px;">
+                    <i class="fa-solid fa-notes-medical"></i>
+                    <span>3. Doctor Consultation &amp; Pharmacist Notes</span>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group flex-1">
+                        <label for="crudPrescriptionAvailable"><i class="fa-solid fa-file-prescription"></i> Prescription Rx File</label>
+                        <select id="crudPrescriptionAvailable">
+                            <option value="Yes">Yes (Rx on File / Verified)</option>
+                            <option value="No">No (OTC / Direct Inquiry)</option>
+                        </select>
+                    </div>
+                    <div class="form-group flex-2">
+                        <label for="crudDoctor"><i class="fa-solid fa-user-doctor"></i> Prescribing Doctor / Hospital</label>
+                        <input type="text" id="crudDoctor" placeholder="e.g. Dr. S. K. Kulkarni (Cardiology) / Dr. Patil Hospital">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group flex-1">
+                        <label for="crudNotes"><i class="fa-solid fa-comment-medical"></i> Pharmacist Dispensing Notes</label>
+                        <textarea id="crudNotes" rows="2" placeholder="e.g. Regular monthly cardiac tablet requirement. Verified by Mr. Siddhu Hajare."></textarea>
+                    </div>
+                </div>
+
+                <div class="crud-actions-row">
+                    <button type="button" class="btn-portal-outline" onclick="closeCustomerCrudModal()">Cancel</button>
+                    <button type="submit" id="saveCustomerBtn" class="btn-primary" style="background: #2563eb;">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <span id="saveCustomerBtnText">Save Patient Record</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 4. SUPABASE ONLINE DATABASE SCHEMA & CONNECTION HELPER MODAL -->
+    <div class="admin-modal-backdrop" id="supabase-schema-backdrop" onclick="closeSupabaseSchemaModal()"></div>
+    <div class="admin-crud-modal schema-modal" id="supabase-schema-modal" role="dialog" aria-labelledby="schemaModalTitle" aria-hidden="true">
+        <div class="admin-crud-card">
+            <div class="crud-header">
+                <div class="crud-header-icon supabase-icon">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+                <div>
+                    <h3 id="schemaModalTitle">Supabase Cloud Database Tables</h3>
+                    <p>Tables for Jankalyan Medical: Medicine Stock Management &amp; Customer Records.</p>
+                </div>
+                <button class="modal-close-btn" onclick="closeSupabaseSchemaModal()" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="schema-content">
+                <!-- Tab selector inside schema modal -->
+                <div class="schema-tabs-bar">
+                    <button type="button" class="schema-tab-btn active" id="schemaTabStockBtn" onclick="selectSchemaTab('stock')">
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                        <span>medicine_stock (Pharmacy Inventory)</span>
+                    </button>
+                    <button type="button" class="schema-tab-btn" id="schemaTabCustBtn" onclick="selectSchemaTab('customers')">
+                        <i class="fa-solid fa-users"></i>
+                        <span>customers (Patient File)</span>
+                    </button>
+                    <button type="button" class="schema-tab-btn" id="schemaTabBothBtn" onclick="selectSchemaTab('both')">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <span>All Tables (Combined SQL)</span>
+                    </button>
+                </div>
+
+                <div class="schema-status-card" id="schemaStatusCard">
+                    <div class="schema-status-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <div>
+                        <strong id="schemaStatusHeadline">Supabase Database Integration Active</strong>
+                        <p id="schemaStatusDetail">Connected to project: <code>https://dasjhsvfipsadrykdojv.supabase.co</code>. Supporting both <code>medicine_stock</code> (Live Stock, Batch Numbers, Expiry Monitoring) and <code>customers</code> (Customer Medicine Registry).</p>
+                    </div>
+                </div>
+
+                <div class="schema-code-section">
+                    <div class="code-header-bar">
+                        <span id="schemaCodeHeaderLabel"><i class="fa-solid fa-code"></i> Supabase SQL Table Definition (`medicine_stock`)</span>
+                        <button class="btn-copy-code" onclick="copySupabaseSQL()">
+                            <i class="fa-solid fa-copy"></i>
+                            <span id="copySqlBtnText">Copy SQL</span>
+                        </button>
+                    </div>
+                    <pre class="sql-code-block" id="supabaseSqlCode"><code>-- 1. Create medicine_stock table in Supabase SQL Editor:
+CREATE TABLE IF NOT EXISTS medicine_stock (
+  id BIGSERIAL PRIMARY KEY,
+  medicine_name TEXT NOT NULL,
+  generic_name TEXT,
+  category TEXT NOT NULL DEFAULT 'Tablet',
+  manufacturer TEXT,
+  batch_number TEXT NOT NULL,
+  expiry_date DATE NOT NULL,
+  quantity INTEGER NOT NULL DEFAULT 0 CHECK (quantity >= 0),
+  min_stock_level INTEGER NOT NULL DEFAULT 10,
+  unit TEXT NOT NULL DEFAULT 'Strips',
+  purchase_price NUMERIC(10, 2) NOT NULL DEFAULT 0.00,
+  mrp NUMERIC(10, 2) NOT NULL DEFAULT 0.00,
+  selling_price NUMERIC(10, 2) NOT NULL DEFAULT 0.00,
+  rack_location TEXT DEFAULT 'Shelf A-1',
+  prescription_required BOOLEAN DEFAULT false,
+  notes TEXT,
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- 2. Enable Row Level Security (RLS) and public access:
+ALTER TABLE medicine_stock ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Allow authenticated and public access to medicine_stock"
+ON medicine_stock FOR ALL
+USING (true)
+WITH CHECK (true);
+
+-- 3. Create indexes for fast search, low stock & expiry tracking:
+CREATE INDEX IF NOT EXISTS idx_stock_med_name ON medicine_stock(medicine_name);
+CREATE INDEX IF NOT EXISTS idx_stock_generic_name ON medicine_stock(generic_name);
+CREATE INDEX IF NOT EXISTS idx_stock_batch_num ON medicine_stock(batch_number);
+CREATE INDEX IF NOT EXISTS idx_stock_expiry ON medicine_stock(expiry_date);
+CREATE INDEX IF NOT EXISTS idx_stock_category ON medicine_stock(category);
+CREATE INDEX IF NOT EXISTS idx_stock_quantity ON medicine_stock(quantity);</code></pre>
+                </div>
+
+                <div class="schema-steps">
+                    <h4><i class="fa-solid fa-list-check"></i> Executing in your Supabase project:</h4>
+                    <ol>
+                        <li>Open your Supabase project at <strong>supabase.com</strong>.</li>
+                        <li>Navigate to the <strong>SQL Editor</strong> tab on the left sidebar.</li>
+                        <li>Click <strong>Copy SQL</strong> above, paste it into the editor, and click <strong>Run</strong>.</li>
+                        <li>The table is immediately ready and live for all pharmacy stock inventory operations.</li>
+                    </ol>
+                </div>
+
+                <div class="schema-modal-footer">
+                    <button class="btn-primary" onclick="closeSupabaseSchemaModal()">Got it</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. INDIVIDUAL BOOKING DETAILS & SLIP MODAL -->
+    <div class="admin-modal-backdrop" id="booking-detail-backdrop" onclick="closeBookingDetailModal()"></div>
+    <div class="admin-crud-modal booking-detail-modal" id="booking-detail-modal" role="dialog" aria-labelledby="bookingDetailTitle" aria-hidden="true">
+        <div class="admin-crud-card" style="max-width: 620px;">
+            <div class="crud-header">
+                <div class="crud-header-icon" style="background: #eef2ff; color: #4f46e5;">
+                    <i class="fa-solid fa-receipt"></i>
+                </div>
+                <div>
+                    <h3 id="bookingDetailTitle">Customer Medicine Record Slip</h3>
+                    <p id="bookingDetailSubtitle">Comprehensive prescription and contact information.</p>
+                </div>
+                <button class="modal-close-btn" onclick="closeBookingDetailModal()" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div id="bookingDetailContent" class="booking-detail-body">
+                <!-- Injected dynamically by script.js -->
+            </div>
+
+            <div class="crud-actions-row" id="bookingDetailActionsRow">
+                <!-- Actions injected dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. ADMIN PROFILE & SINGLE-SLOT SECURITY SETTINGS MODAL -->
+    <div class="admin-modal-backdrop" id="admin-profile-backdrop" onclick="closeAdminProfileModal()"></div>
+    <div class="admin-crud-modal" id="admin-profile-modal" role="dialog" aria-labelledby="profileModalTitle" aria-hidden="true">
+        <div class="admin-crud-card" style="max-width: 540px;">
+            <div class="crud-header">
+                <div class="crud-header-icon" style="background: #ecfdf5; color: #059669;">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <div>
+                    <h3 id="profileModalTitle">Admin Account & Single-Slot Security</h3>
+                    <p>Single Master Administrator Slot Management & Password Control.</p>
+                </div>
+                <button class="modal-close-btn" onclick="closeAdminProfileModal()" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="admin-profile-content" id="adminProfileContent">
+                <!-- Populated dynamically -->
+            </div>
+
+            <div class="crud-actions-row">
+                <button type="button" class="btn-portal-outline" onclick="closeAdminProfileModal()">Close</button>
+                <button type="button" class="btn-primary" onclick="saveAdminProfileChanges()">
+                    <i class="fa-solid fa-floppy-disk"></i>
+                    <span>Save Changes</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. CUSTOMER ORDER CONFIRMATION / WHATSAPP DISPATCH MODAL -->
+    <div class="admin-modal-backdrop" id="order-success-backdrop" onclick="closeOrderSuccessModal()"></div>
+    <div class="admin-login-modal order-success-modal" id="order-success-modal" role="dialog" aria-labelledby="orderSuccessTitle" aria-hidden="true">
+        <div class="admin-login-card">
+            <button class="modal-close-btn" onclick="closeOrderSuccessModal()" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="order-success-header">
+                <div class="success-checkmark-icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h3 id="orderSuccessTitle">Inquiry Registered Successfully!</h3>
+                <p>Your medicine request has been saved to the online database.</p>
+            </div>
+
+            <div class="order-summary-box" id="orderSummaryBox">
+                <!-- Filled dynamically -->
+            </div>
+
+            <div class="order-success-actions">
+                <a id="dispatchWhatsAppBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-submit">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Open WhatsApp & Send to Mr. Siddhu Hajare</span>
+                </a>
+                <button class="btn-portal-outline btn-full-width" onclick="closeOrderSuccessModal()">
+                    <span>Done</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. DEDICATED DELETE CUSTOMER CONFIRMATION MODAL -->
+    <div class="admin-modal-backdrop" id="delete-confirm-backdrop" onclick="closeDeleteCustomerModal()"></div>
+    <div class="admin-crud-modal delete-confirm-modal" id="delete-confirm-modal" role="dialog" aria-labelledby="deleteModalTitle" aria-hidden="true">
+        <div class="admin-crud-card" style="max-width: 480px;">
+            <div class="crud-header">
+                <div class="crud-header-icon danger-icon">
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
+                <div>
+                    <h3 id="deleteModalTitle">Delete Customer Record</h3>
+                    <p>Permanently remove customer medicine record from pharmacy database.</p>
+                </div>
+                <button class="modal-close-btn" onclick="closeDeleteCustomerModal()" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="delete-target-preview" id="deleteTargetPreview">
+                <!-- Populated dynamically with patient details -->
+            </div>
+
+            <p style="font-size: 0.86rem; color: #64748b; line-height: 1.5; margin-bottom: 8px;">
+                <strong style="color: #dc2626;"><i class="fa-solid fa-triangle-exclamation"></i> Warning:</strong> This action will delete the customer's prescription file and contact details. This cannot be undone.
+            </p>
+
+            <div class="crud-actions-row">
+                <button type="button" class="btn-portal-outline" onclick="closeDeleteCustomerModal()">Cancel</button>
+                <button type="button" id="confirmDeleteBtn" class="btn-danger" onclick="confirmDeleteCustomer()">
+                    <i class="fa-solid fa-trash-can"></i>
+                    <span id="confirmDeleteBtnText">Yes, Delete Customer Record</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- 9. ADD / EDIT MEDICINE STOCK MODAL                       -->
+    <!-- ======================================================== -->
+    <div class="admin-modal-backdrop" id="stock-crud-backdrop" onclick="closeStockModal()"></div>
+    <div class="admin-crud-modal stock-crud-modal" id="stock-crud-modal" role="dialog" aria-labelledby="stockCrudModalTitle" aria-hidden="true">
+        <div class="admin-crud-card" style="max-width: 820px;">
+            <div class="crud-header" style="background: linear-gradient(135deg, #064e3b 0%, #065f46 100%);">
+                <div class="crud-header-icon" style="background: rgba(255,255,255,0.18); color: #ffffff;">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                </div>
+                <div>
+                    <h3 id="stockCrudModalTitle" style="color: #ffffff;">Add Medicine Stock</h3>
+                    <p style="color: #a7f3d0;">Record pharmacy medicine inventory, batch number, expiry date &amp; storage shelf.</p>
+                </div>
+                <button class="modal-close-btn" onclick="closeStockModal()" aria-label="Close" style="color: #ffffff;">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form id="medicineStockForm" onsubmit="handleStockFormSubmit(event)">
+                <input type="hidden" id="stockCrudItemId" value="">
+
+                <!-- 1-Click Popular Indian Medicine Fast-Fill -->
+                <div class="stock-preset-medicine-box">
+                    <div class="stock-preset-header">
+                        <span><i class="fa-solid fa-wand-magic-sparkles"></i> <strong>Quick Auto-Fill Popular Pharmacy Medicines:</strong></span>
+                        <small>Click to auto-fill name, salt formula, category, mfr &amp; pricing</small>
+                    </div>
+                    <div class="stock-preset-chips-scroll">
+                        <button type="button" class="btn-med-preset" onclick="quickFillPresetMedicine('dolo650')">💊 Dolo 650</button>
+                        <button type="button" class="btn-med-preset" onclick="quickFillPresetMedicine('telma40')">❤️ Telma 40</button>
+                        <button type="button" class="btn-med-preset" onclick="quickFillPresetMedicine('pand')">🛡️ Pan-D</button>
+                        <button type="button" class="btn-med-preset" onclick="quickFillPresetMedicine('augmentin')">🔬 Augmentin 625</button>
+                        <button type="button" class="btn-med-preset" onclick="quickFillPresetMedicine('ascoril')">🍯 Ascoril Syrup</button>
+                        <button type="button" class="btn-med-preset" onclick="quickFillPresetMedicine('shelcal')">🦴 Shelcal 500</button>
+                        <button type="button" class="btn-med-preset" onclick="quickFillPresetMedicine('azithral')">⚡ Azithral 500</button>
+                        <button type="button" class="btn-med-preset" onclick="quickFillPresetMedicine('betadine')">🩹 Betadine 10%</button>
+                        <button type="button" class="btn-med-preset" onclick="quickFillPresetMedicine('monocef')">💉 Monocef 1g</button>
+                        <button type="button" class="btn-med-preset" onclick="quickFillPresetMedicine('cetirizine')">🌿 Cetzine 10</button>
+                        <button type="button" class="btn-med-preset" onclick="quickFillPresetMedicine('electral')">💧 Electral ORS</button>
+                    </div>
+                </div>
+
+                <!-- Quick Manufacturer Suggestions -->
+                <div class="dist-quick-presets-box">
+                    <span class="preset-label"><i class="fa-solid fa-bolt"></i> Quick Manufacturer:</span>
+                    <div class="preset-chips">
+                        <button type="button" class="preset-chip" onclick="quickFillStockManufacturer('Micro Labs Ltd')">+ Micro Labs</button>
+                        <button type="button" class="preset-chip" onclick="quickFillStockManufacturer('Mankind Pharma')">+ Mankind</button>
+                        <button type="button" class="preset-chip" onclick="quickFillStockManufacturer('Cipla Ltd')">+ Cipla</button>
+                        <button type="button" class="preset-chip" onclick="quickFillStockManufacturer('Sun Pharma')">+ Sun Pharma</button>
+                        <button type="button" class="preset-chip" onclick="quickFillStockManufacturer('Alkem Laboratories')">+ Alkem</button>
+                        <button type="button" class="preset-chip" onclick="quickFillStockManufacturer('Torrent Pharma')">+ Torrent</button>
+                        <button type="button" class="preset-chip" onclick="quickFillStockManufacturer('GSK Pharmaceuticals')">+ GSK</button>
+                        <button type="button" class="preset-chip" onclick="quickFillStockManufacturer('Abbott Healthcare')">+ Abbott</button>
+                    </div>
+                </div>
+
+                <!-- Section 1: Medicine Details -->
+                <div class="form-section-title">
+                    <i class="fa-solid fa-capsules"></i>
+                    <span>1. Medicine &amp; Product Identification</span>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group flex-2">
+                        <label for="stockMedicineName"><i class="fa-solid fa-pills"></i> Medicine / Brand Name <span class="required-star">*</span></label>
+                        <input type="text" id="stockMedicineName" required placeholder="e.g. Dolo 650mg Tablet, Telmakind 40mg">
+                    </div>
+                    <div class="form-group flex-2">
+                        <label for="stockGenericName"><i class="fa-solid fa-flask-vial"></i> Generic Name / Salt Formula</label>
+                        <input type="text" id="stockGenericName" placeholder="e.g. Paracetamol 650mg, Telmisartan 40mg">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group flex-1">
+                        <label for="stockCategory"><i class="fa-solid fa-tablets"></i> Dosage Form / Category <span class="required-star">*</span></label>
+                        <select id="stockCategory" required>
+                            <option value="Tablet">Tablet (गोळ्या)</option>
+                            <option value="Capsule">Capsule (कॅप्सूल)</option>
+                            <option value="Syrup / Liquid">Syrup / Liquid (सिरप)</option>
+                            <option value="Injection / Vial">Injection / Vial (इंजेक्शन)</option>
+                            <option value="Pediatric Drops / Food">Pediatric Drops / Food (बाल औषधे)</option>
+                            <option value="Ointment / Cream">Ointment / Cream (मलहम)</option>
+                            <option value="Surgical / Devices">Surgical / Devices (सर्जिकल)</option>
+                            <option value="Ayurvedic / Herbal">Ayurvedic / Herbal (आयुर्वेदिक)</option>
+                            <option value="Veterinary">Veterinary (पशुवैद्यकीय)</option>
+                        </select>
+                    </div>
+                    <div class="form-group flex-1">
+                        <label for="stockManufacturer"><i class="fa-solid fa-industry"></i> Manufacturer / Pharmaceutical Co.</label>
+                        <input type="text" id="stockManufacturer" placeholder="e.g. Micro Labs Ltd, Mankind Pharma">
+                    </div>
+                </div>
+
+                <!-- Section 2: Batch & Inventory Metrics -->
+                <div class="form-section-title">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                    <span>2. Batch Details &amp; Quantity</span>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group flex-1">
+                        <label for="stockBatchNumber"><i class="fa-solid fa-barcode"></i> Batch Number <span class="required-star">*</span></label>
+                        <input type="text" id="stockBatchNumber" required placeholder="e.g. DL-2204" style="text-transform: uppercase;">
+                    </div>
+                    <div class="form-group flex-1">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                            <label for="stockExpiryDate" style="margin-bottom: 0;"><i class="fa-solid fa-calendar-xmark"></i> Expiry Date <span class="required-star">*</span></label>
+                            <div class="quick-expiry-btns">
+                                <button type="button" class="btn-quick-exp" onclick="setQuickExpiry(1)" title="Set expiry to +1 year from today">+1 Yr</button>
+                                <button type="button" class="btn-quick-exp" onclick="setQuickExpiry(2)" title="Set expiry to +2 years from today">+2 Yrs</button>
+                                <button type="button" class="btn-quick-exp" onclick="setQuickExpiry(3)" title="Set expiry to +3 years from today">+3 Yrs</button>
+                            </div>
+                        </div>
+                        <input type="date" id="stockExpiryDate" required>
+                    </div>
+                    <div class="form-group flex-1">
+                        <label for="stockQuantity"><i class="fa-solid fa-cubes-stacked"></i> Current Stock Quantity <span class="required-star">*</span></label>
+                        <input type="number" id="stockQuantity" required min="0" value="10" placeholder="e.g. 50">
+                    </div>
+                    <div class="form-group flex-1">
+                        <label for="stockMinLevel"><i class="fa-solid fa-bell"></i> Minimum Reorder Alert <span class="required-star">*</span></label>
+                        <input type="number" id="stockMinLevel" required min="1" value="10" placeholder="e.g. 15">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group flex-1">
+                        <label for="stockUnit"><i class="fa-solid fa-box-open"></i> Packaging Unit <span class="required-star">*</span></label>
+                        <input type="text" id="stockUnit" required placeholder="e.g. Strips (15 tabs), Bottles (100ml), Tubes" value="Strips (10 tabs)">
+                    </div>
+                    <div class="form-group flex-1">
+                        <label for="stockRackLocation"><i class="fa-solid fa-map-pin"></i> Shelf / Rack Storage Location</label>
+                        <input type="text" id="stockRackLocation" placeholder="e.g. Rack A-1 (Counter), Cold Storage 2-8°C" value="Rack A-1">
+                    </div>
+                </div>
+
+                <!-- Section 3: Pricing & Commercials -->
+                <div class="form-section-title">
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                    <span>3. Pricing &amp; Commercials (₹)</span>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group flex-1">
+                        <label for="stockPurchasePrice"><i class="fa-solid fa-receipt"></i> Purchase Cost Price (₹)</label>
+                        <input type="number" id="stockPurchasePrice" step="0.01" min="0" placeholder="e.g. 21.50" value="0.00" oninput="calculateModalMargin()">
+                    </div>
+                    <div class="form-group flex-1">
+                        <label for="stockMrp"><i class="fa-solid fa-tag"></i> Printed MRP (₹)</label>
+                        <input type="number" id="stockMrp" step="0.01" min="0" placeholder="e.g. 33.60" value="0.00" oninput="calculateModalMargin()">
+                    </div>
+                    <div class="form-group flex-1">
+                        <label for="stockSellingPrice"><i class="fa-solid fa-hand-holding-dollar"></i> Counter Selling Price (₹)</label>
+                        <input type="number" id="stockSellingPrice" step="0.01" min="0" placeholder="e.g. 31.00" value="0.00" oninput="calculateModalMargin()">
+                    </div>
+                </div>
+
+                <!-- Live Profit Margin Display Widget -->
+                <div class="stock-margin-calculator-box" id="stockModalMarginBox">
+                    <div class="margin-calc-content">
+                        <span class="margin-calc-icon"><i class="fa-solid fa-chart-line"></i></span>
+                        <span class="margin-calc-text" id="stockModalMarginText">Counter Profit Margin: ₹0.00 (0.0% Profit)</span>
+                    </div>
+                </div>
+
+                <!-- Section 4: Schedule / Prescription & Clinical Notes -->
+                <div class="form-section-title">
+                    <i class="fa-solid fa-notes-medical"></i>
+                    <span>4. Clinical Classification &amp; Storage Notes</span>
+                </div>
+
+                <div class="form-row" style="align-items: center; margin-bottom: 12px;">
+                    <label class="custom-checkbox-label" style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 0.92rem; font-weight: 600; color: #1e293b;">
+                        <input type="checkbox" id="stockRxRequired" style="width: 18px; height: 18px; accent-color: #dc2626;">
+                        <span><strong style="color: #dc2626;">Schedule H / H1 Rx Drug:</strong> Doctor Prescription strictly required before dispensing</span>
+                    </label>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group flex-1">
+                        <label for="stockNotes"><i class="fa-solid fa-comment-medical"></i> Inventory Notes &amp; Storage Instructions</label>
+                        <textarea id="stockNotes" rows="2" placeholder="e.g. Fast-moving medicine. Keep away from direct sunlight. High seasonal demand during monsoons."></textarea>
+                    </div>
+                </div>
+
+                <div class="crud-actions-row">
+                    <button type="button" class="btn-portal-outline" onclick="closeStockModal()">Cancel</button>
+                    <button type="submit" id="saveStockBtn" class="btn-primary" style="background: #059669;">
+                        <i class="fa-solid fa-check"></i>
+                        <span id="saveStockBtnText">Save Medicine Stock</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- 10. QUICK STOCK QUANTITY ADJUSTMENT MODAL                -->
+    <!-- ======================================================== -->
+    <div class="admin-modal-backdrop" id="stock-adjust-backdrop" onclick="closeStockAdjustModal()"></div>
+    <div class="admin-crud-modal" id="stock-adjust-modal" role="dialog" aria-labelledby="stockAdjustTitle" aria-hidden="true">
+        <div class="admin-crud-card" style="max-width: 520px;">
+            <div class="crud-header" style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%);">
+                <div class="crud-header-icon" style="background: rgba(255,255,255,0.15); color: #ffffff;">
+                    <i class="fa-solid fa-sliders"></i>
+                </div>
+                <div>
+                    <h3 id="stockAdjustTitle" style="color: #ffffff;">Quick Stock Adjustment</h3>
+                    <p style="color: #cbd5e1;">Rapidly update inventory count for inward delivery, sales, or returns.</p>
+                </div>
+                <button class="modal-close-btn" onclick="closeStockAdjustModal()" aria-label="Close" style="color: #ffffff;">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form id="stockAdjustForm" onsubmit="handleStockAdjustSubmit(event)">
+                <input type="hidden" id="adjustStockId" value="">
+
+                <div class="stock-adjust-preview-box" id="stockAdjustPreviewBox" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px; margin-bottom: 16px;">
+                    <h4 id="adjustMedName" style="font-size: 1.05rem; font-weight: 700; color: #0f172a; margin-bottom: 4px;">Medicine Name</h4>
+                    <div style="font-size: 0.85rem; color: #64748b; display: flex; gap: 16px; flex-wrap: wrap;">
+                        <span><strong style="color: #334155;">Batch:</strong> <span id="adjustMedBatch">-</span></span>
+                        <span><strong style="color: #334155;">Current Stock:</strong> <span id="adjustMedCurrentQty" style="font-weight: 700; color: #059669;">0</span> <span id="adjustMedUnit">Units</span></span>
+                    </div>
+                </div>
+
+                <!-- 1-Click Adjustment Quantity Presets -->
+                <div class="quick-adjust-chips-wrap">
+                    <span class="adjust-chips-label"><i class="fa-solid fa-bolt"></i> 1-Click Fast Delta:</span>
+                    <div class="adjust-chips-group">
+                        <button type="button" class="btn-adjust-chip plus" onclick="setAdjustDelta(1)">+1</button>
+                        <button type="button" class="btn-adjust-chip plus" onclick="setAdjustDelta(5)">+5</button>
+                        <button type="button" class="btn-adjust-chip plus" onclick="setAdjustDelta(10)">+10 (1 Box)</button>
+                        <button type="button" class="btn-adjust-chip plus" onclick="setAdjustDelta(20)">+20</button>
+                        <button type="button" class="btn-adjust-chip plus" onclick="setAdjustDelta(50)">+50</button>
+                        <button type="button" class="btn-adjust-chip minus" onclick="setAdjustDelta(-1)">-1 (Dispense)</button>
+                        <button type="button" class="btn-adjust-chip minus" onclick="setAdjustDelta(-5)">-5</button>
+                        <button type="button" class="btn-adjust-chip minus" onclick="setAdjustDelta(-10)">-10</button>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group flex-1">
+                        <label for="adjustReason"><i class="fa-solid fa-tag"></i> Adjustment Reason <span class="required-star">*</span></label>
+                        <select id="adjustReason" required onchange="handleAdjustReasonChange()">
+                            <option value="Fresh Inward Supply">➕ Fresh Inward Supply from Wholesaler</option>
+                            <option value="Counter Dispensed / Patient Sale">➖ Counter Dispensed / Patient Sale</option>
+                            <option value="Damaged / Broken in Transit">⚠️ Damaged / Broken in Transit</option>
+                            <option value="Batch Expiry Return">⏳ Batch Expiry Supplier Return</option>
+                            <option value="Physical Inventory Audit Correction">📋 Physical Inventory Audit Correction</option>
+                            <option value="Other">Other Adjustment</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group flex-1">
+                        <label for="adjustDelta"><i class="fa-solid fa-arrow-up-right-dots"></i> Quantity Adjustment (+ / -) <span class="required-star">*</span></label>
+                        <div style="display: flex; gap: 8px; align-items: center;">
+                            <input type="number" id="adjustDelta" required value="10" placeholder="+10 or -5" oninput="updateAdjustPreview()">
+                        </div>
+                        <small style="color: #64748b; font-size: 0.78rem;">Use positive number (+10) to add stock, negative (-5) to deduct.</small>
+                    </div>
+                    <div class="form-group flex-1">
+                        <label><i class="fa-solid fa-calculator"></i> Resulting Stock</label>
+                        <div id="adjustResultingDisplay" style="height: 42px; background: #ecfdf5; border: 1.5px solid #a7f3d0; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; font-weight: 800; color: #059669;">
+                            0 Units
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group flex-1">
+                        <label for="adjustNotes"><i class="fa-solid fa-comment"></i> Remarks / Audit Note</label>
+                        <input type="text" id="adjustNotes" placeholder="e.g. Received 10 boxes via Pandharpur delivery invoice #8841">
+                    </div>
+                </div>
+
+                <div class="crud-actions-row">
+                    <button type="button" class="btn-portal-outline" onclick="closeStockAdjustModal()">Cancel</button>
+                    <button type="submit" id="saveAdjustBtn" class="btn-primary" style="background: #0f172a;">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Apply Adjustment</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- 11. DEDICATED DELETE MEDICINE STOCK CONFIRMATION MODAL   -->
+    <!-- ======================================================== -->
+    <div class="admin-modal-backdrop" id="stock-delete-backdrop" onclick="closeDeleteStockModal()"></div>
+    <div class="admin-crud-modal delete-confirm-modal" id="stock-delete-modal" role="dialog" aria-labelledby="stockDeleteModalTitle" aria-hidden="true">
+        <div class="admin-crud-card" style="max-width: 480px;">
+            <div class="crud-header">
+                <div class="crud-header-icon danger-icon">
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
+                <div>
+                    <h3 id="stockDeleteModalTitle">Delete Medicine Stock</h3>
+                    <p>Permanently remove medicine item from pharmacy inventory.</p>
+                </div>
+                <button class="modal-close-btn" onclick="closeDeleteStockModal()" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="delete-target-preview" id="stockDeleteTargetPreview">
+                <!-- Populated dynamically with medicine details -->
+            </div>
+
+            <p style="font-size: 0.86rem; color: #64748b; line-height: 1.5; margin-bottom: 8px;">
+                <strong style="color: #dc2626;"><i class="fa-solid fa-triangle-exclamation"></i> Warning:</strong> This will delete the batch number, shelf placement, and stock ledger entry from both the local store cache and Supabase database.
+            </p>
+
+            <div class="crud-actions-row">
+                <button type="button" class="btn-portal-outline" onclick="closeDeleteStockModal()">Cancel</button>
+                <button type="button" id="confirmStockDeleteBtn" class="btn-danger" onclick="confirmDeleteStockItem()">
+                    <i class="fa-solid fa-trash-can"></i>
+                    <span id="confirmStockDeleteBtnText">Yes, Delete Item</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
+

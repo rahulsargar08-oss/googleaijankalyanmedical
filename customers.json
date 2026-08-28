@@ -1,0 +1,157 @@
+[
+  {
+    "id": 3,
+    "full_name": "Ananda Deshmukh",
+    "mobile_number": "9822014589",
+    "age": 58,
+    "gender": "Male",
+    "address": "Miraj Road",
+    "area_village": "Sangola Rural",
+    "medicine_name": "Telmakind 40mg, Ascoril D Plus Cough Syrup",
+    "required_tablet": "Telmakind 40mg, Ascoril D Plus Cough Syrup",
+    "medicine_strength": "40mg, 100ml Bottle",
+    "medicine_type": "Tablet, Syrup / Liquid",
+    "preferred_doctor": "Dr. S. K. Kulkarni",
+    "prescription_available": "Yes",
+    "status": "Active",
+    "notes": "Requires both BP tablet and cough syrup",
+    "created_at": "2026-08-28T04:38:10.325+00:00",
+    "updated_at": "2026-08-28T04:38:10.53849+00:00",
+    "medicines": [
+      {
+        "name": "Telmakind 40mg",
+        "type": "Tablet",
+        "strength": "40mg",
+        "quantity": "1 Strip"
+      },
+      {
+        "name": "Ascoril D Plus Cough Syrup",
+        "type": "Syrup / Liquid",
+        "strength": "100ml Bottle",
+        "quantity": "1 Bottle"
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "full_name": "Rahul Sargar",
+    "mobile_number": "7709647627",
+    "age": 26,
+    "gender": "Male",
+    "address": "Near Wadhegaon Naka",
+    "area_village": "Sangola (413307)",
+    "medicines": [
+      {
+        "name": "Telmakind 40mg",
+        "strength": "40mg",
+        "type": "Tablet",
+        "quantity": "1 Strip (10 Tabs)"
+      },
+      {
+        "name": "Dolo 650",
+        "strength": "650mg",
+        "type": "Tablet",
+        "quantity": "1 Strip (15 Tabs)"
+      }
+    ],
+    "medicine_name": "Telmakind 40mg Tablet, Dolo 650",
+    "required_tablet": "Telmakind 40mg Tablet, Dolo 650",
+    "medicine_strength": "40mg / 650mg",
+    "medicine_type": "Tablet",
+    "preferred_doctor": "Dr. S. K. Kulkarni (Cardiology)",
+    "prescription_available": "Yes",
+    "status": "Active",
+    "notes": "Regular customer prescription record - in-store patient file.",
+    "created_at": "2026-08-28T02:59:15.498Z"
+  },
+  {
+    "id": 102,
+    "full_name": "Ananda Deshmukh",
+    "mobile_number": "9822014589",
+    "age": 58,
+    "gender": "Male",
+    "address": "Near S.T. Stand",
+    "area_village": "Sangola Town",
+    "medicines": [
+      {
+        "name": "Telma 40mg",
+        "strength": "40mg",
+        "type": "Tablet",
+        "quantity": "1 Strip"
+      },
+      {
+        "name": "Ecosprin 75mg",
+        "strength": "75mg",
+        "type": "Tablet",
+        "quantity": "1 Strip"
+      }
+    ],
+    "medicine_name": "Telma 40mg, Ecosprin 75mg",
+    "required_tablet": "Telma 40mg, Ecosprin 75mg",
+    "medicine_strength": "40mg / 75mg",
+    "medicine_type": "Tablet",
+    "preferred_doctor": "Dr. S. K. Kulkarni (Cardiologist)",
+    "prescription_available": "Yes",
+    "status": "Verified",
+    "notes": "Hypertension monthly medication record. Verified prescription on file.",
+    "created_at": "2026-08-28T01:44:15.498Z"
+  },
+  {
+    "id": 103,
+    "full_name": "Sunita Vijay Shinde",
+    "mobile_number": "9421039872",
+    "age": 42,
+    "gender": "Female",
+    "address": "Wadhegaon Road",
+    "area_village": "Sangola - 413307",
+    "medicines": [
+      {
+        "name": "Pan-D (Pantoprazole + Domperidone)",
+        "strength": "40mg + 30mg",
+        "type": "Capsule",
+        "quantity": "1 Strip"
+      }
+    ],
+    "medicine_name": "Pan-D (Pantoprazole + Domperidone)",
+    "required_tablet": "Pan-D (Pantoprazole + Domperidone)",
+    "medicine_strength": "40mg + 30mg",
+    "medicine_type": "Capsule",
+    "preferred_doctor": "Dr. Patil Hospital Sangola",
+    "prescription_available": "Yes",
+    "status": "Verified",
+    "notes": "Gastric medication record. In-store customer profile.",
+    "created_at": "2026-08-28T00:44:15.498Z"
+  },
+  {
+    "id": 104,
+    "full_name": "Tanaji Baburao Mane",
+    "mobile_number": "9763254109",
+    "age": 64,
+    "gender": "Male",
+    "address": "Nazar Camp",
+    "area_village": "Sangola Rural",
+    "medicines": [
+      {
+        "name": "Glycomet 500mg",
+        "strength": "500mg",
+        "type": "Tablet",
+        "quantity": "1 Strip"
+      },
+      {
+        "name": "Ascoril-D Cough Syrup",
+        "strength": "100ml",
+        "type": "Syrup / Liquid",
+        "quantity": "1 Bottle"
+      }
+    ],
+    "medicine_name": "Glycomet 500mg, Ascoril-D Syrup",
+    "required_tablet": "Glycomet 500mg, Ascoril-D Syrup",
+    "medicine_strength": "500mg / 100ml",
+    "medicine_type": "Tablet, Syrup / Liquid",
+    "preferred_doctor": "Dr. Shinde (Diabetologist)",
+    "prescription_available": "Yes",
+    "status": "Under Review",
+    "notes": "Diabetes and cough prescription record. Tablet and syrup prescribed together.",
+    "created_at": "2026-08-27T21:44:15.498Z"
+  }
+]
